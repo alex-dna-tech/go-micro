@@ -73,7 +73,10 @@ builds:
         goarch: 386
 
 archives:
-  - formats: [tar.gz]
+  - id: micro
+    ids:
+      - micro
+    formats: [tar.gz]
     name_template: >-
       {{ .Binary }}_
       {{- title .Os }}_
@@ -81,7 +84,25 @@ archives:
       {{- else if eq .Arch "386" }}i386
       {{- else }}{{ .Arch }}{{ end }}
       {{- if .Arm }}v{{ .Arm }}{{ end }}
+    files:
+      - none*
+    format_overrides:
+      - goos: windows
+        formats: [zip]
 
+  - id: protoc-gen-micro
+    ids:
+      - protoc-gen-micro
+    formats: [tar.gz]
+    name_template: >-
+      {{ .Binary }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
+    files:
+      - none*
     format_overrides:
       - goos: windows
         formats: [zip]
