@@ -13,7 +13,7 @@ RUN addgroup --gid "$GID" "$GROUPNAME" \
     --no-create-home \
     --uid "$UID" "$USER"
 
-ENV PATH /usr/local/go/bin:$PATH
+ENV PATH=/usr/local/go/bin:$PATH
 RUN apk --no-cache add git make curl
 COPY --from=golang:1.26.0-alpine /usr/local/go /usr/local/go
 
