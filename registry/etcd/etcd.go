@@ -14,9 +14,9 @@ import (
 	"time"
 
 	hash "github.com/mitchellh/hashstructure"
-	"go-micro.dev/v5/logger"
-	"go-micro.dev/v5/registry"
-	mtls "go-micro.dev/v5/internal/util/tls"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/registry"
+	mtls "micro.labqa.pp.ua/v5/internal/util/tls"
 	"go.etcd.io/etcd/api/v3/v3rpc/rpctypes"
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"go.uber.org/zap"

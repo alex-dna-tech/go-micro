@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"go-micro.dev/v5/codec"
+	"micro.labqa.pp.ua/v5/codec"
 	"google.golang.org/protobuf/types/known/anypb"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )

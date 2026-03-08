@@ -4,7 +4,7 @@ package pool
 import (
 	"time"
 
-	"go-micro.dev/v5/transport"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 // Pool is an interface for connection pooling.

@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/urfave/cli/v2"
-	merrors "go-micro.dev/v5/errors"
+	merrors "micro.labqa.pp.ua/v5/errors"
 )
 
 type Exec func(*cli.Context, []string) ([]byte, error)

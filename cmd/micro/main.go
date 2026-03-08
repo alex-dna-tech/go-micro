@@ -2,14 +2,14 @@ package main
 
 import (
 	"embed"
-	"go-micro.dev/v5/cmd"
+	"micro.labqa.pp.ua/v5/cmd"
 
-	_ "go-micro.dev/v5/cmd/micro/cli"
-	_ "go-micro.dev/v5/cmd/micro/cli/build"
-	_ "go-micro.dev/v5/cmd/micro/cli/deploy"
-	_ "go-micro.dev/v5/cmd/micro/mcp"
-	_ "go-micro.dev/v5/cmd/micro/run"
-	"go-micro.dev/v5/cmd/micro/server"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/cli"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/cli/build"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/cli/deploy"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/mcp"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/run"
+	"micro.labqa.pp.ua/v5/cmd/micro/server"
 )
 
 //go:embed web/styles.css web/main.js web/templates/*

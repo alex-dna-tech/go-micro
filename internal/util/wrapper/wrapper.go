@@ -4,13 +4,13 @@ import (
 	"context"
 	"strings"
 
-	"go-micro.dev/v5/auth"
-	"go-micro.dev/v5/client"
-	"go-micro.dev/v5/debug/stats"
-	"go-micro.dev/v5/debug/trace"
-	"go-micro.dev/v5/metadata"
-	"go-micro.dev/v5/server"
-	"go-micro.dev/v5/transport/headers"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/debug/stats"
+	"micro.labqa.pp.ua/v5/debug/trace"
+	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/v5/server"
+	"micro.labqa.pp.ua/v5/transport/headers"
 )
 
 type fromServiceWrapper struct {

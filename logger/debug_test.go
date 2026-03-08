@@ -3,7 +3,7 @@ package logger
 import (
 	"testing"
 
-	dlog "go-micro.dev/v5/debug/log"
+	dlog "micro.labqa.pp.ua/v5/debug/log"
 )
 
 func TestDebugLogBuffer(t *testing.T) {

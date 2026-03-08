@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"go-micro.dev/v5/broker"
+	"micro.labqa.pp.ua/v5/broker"
 )
 
 func TestMemoryBroker(t *testing.T) {

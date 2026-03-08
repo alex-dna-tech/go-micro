@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"go-micro.dev/v5/codec"
-	"go-micro.dev/v5/codec/bytes"
+	"micro.labqa.pp.ua/v5/codec"
+	"micro.labqa.pp.ua/v5/codec/bytes"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding"
 	"google.golang.org/protobuf/encoding/protojson"

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/nats-io/nats.go"
-	"go-micro.dev/v5/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 type contextQuorumKey struct{}

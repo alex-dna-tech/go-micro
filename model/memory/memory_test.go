@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"go-micro.dev/v5/model"
+	"micro.labqa.pp.ua/v5/model"
 )
 
 type User struct {

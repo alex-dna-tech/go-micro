@@ -3,7 +3,7 @@ package flag
 import (
 	"context"
 
-	"go-micro.dev/v5/config/source"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 type includeUnsetKey struct{}

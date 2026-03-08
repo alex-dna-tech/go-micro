@@ -32,11 +32,11 @@ import (
 	"testing"
 	"time"
 
-	"go-micro.dev/v5/broker"
-	"go-micro.dev/v5/client"
-	"go-micro.dev/v5/registry"
-	"go-micro.dev/v5/server"
-	"go-micro.dev/v5/transport"
+	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/server"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 // Harness provides an in-process test environment for a micro service

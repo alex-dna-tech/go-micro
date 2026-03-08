@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"go-micro.dev/v5/web"
+	"micro.labqa.pp.ua/v5/web"
 )
 
 type User struct {

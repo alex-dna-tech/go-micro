@@ -12,8 +12,8 @@ import (
 	"net/http"
 	"time"
 
-	"go-micro.dev/v5/gateway/mcp"
-	"go-micro.dev/v5/registry"
+	"micro.labqa.pp.ua/v5/gateway/mcp"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // Options configures the HTTP API gateway

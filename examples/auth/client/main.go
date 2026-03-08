@@ -6,13 +6,13 @@ import (
 	"log"
 	"os"
 
-	"go-micro.dev/v5"
-	"go-micro.dev/v5/auth"
-	"go-micro.dev/v5/auth/noop"
-	"go-micro.dev/v5/client"
-	authWrapper "go-micro.dev/v5/wrapper/auth"
+	"micro.labqa.pp.ua/v5"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/auth/noop"
+	"micro.labqa.pp.ua/v5/client"
+	authWrapper "micro.labqa.pp.ua/v5/wrapper/auth"
 
-	pb "go-micro.dev/v5/examples/auth/proto"
+	pb "micro.labqa.pp.ua/v5/examples/auth/proto"
 )
 
 func main() {

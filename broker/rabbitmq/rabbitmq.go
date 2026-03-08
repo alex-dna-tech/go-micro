@@ -10,8 +10,8 @@ import (
 	"time"
 
 	amqp "github.com/rabbitmq/amqp091-go"
-	"go-micro.dev/v5/broker"
-	"go-micro.dev/v5/logger"
+	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/v5/logger"
 )
 
 type rbroker struct {

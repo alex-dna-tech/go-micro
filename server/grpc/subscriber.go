@@ -7,12 +7,12 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"go-micro.dev/v5/broker"
-	"go-micro.dev/v5/errors"
-	"go-micro.dev/v5/logger"
-	"go-micro.dev/v5/metadata"
-	"go-micro.dev/v5/registry"
-	"go-micro.dev/v5/server"
+	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/v5/errors"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/server"
 )
 
 const (

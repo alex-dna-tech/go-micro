@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"go-micro.dev/v5/transport"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 type pool struct {

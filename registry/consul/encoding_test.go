@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"go-micro.dev/v5/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 func TestEncodingEndpoints(t *testing.T) {

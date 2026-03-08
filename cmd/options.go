@@ -3,19 +3,19 @@ package cmd
 import (
 	"context"
 
-	"go-micro.dev/v5/auth"
-	"go-micro.dev/v5/broker"
-	"go-micro.dev/v5/cache"
-	"go-micro.dev/v5/client"
-	"go-micro.dev/v5/config"
-	"go-micro.dev/v5/debug/profile"
-	"go-micro.dev/v5/debug/trace"
-	"go-micro.dev/v5/events"
-	"go-micro.dev/v5/registry"
-	"go-micro.dev/v5/selector"
-	"go-micro.dev/v5/server"
-	"go-micro.dev/v5/store"
-	"go-micro.dev/v5/transport"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/v5/cache"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/config"
+	"micro.labqa.pp.ua/v5/debug/profile"
+	"micro.labqa.pp.ua/v5/debug/trace"
+	"micro.labqa.pp.ua/v5/events"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/selector"
+	"micro.labqa.pp.ua/v5/server"
+	"micro.labqa.pp.ua/v5/store"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 type Options struct {

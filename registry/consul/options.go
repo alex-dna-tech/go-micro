@@ -6,7 +6,7 @@ import (
 	"time"
 
 	consul "github.com/hashicorp/consul/api"
-	"go-micro.dev/v5/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // Define a custom type for context keys to avoid collisions.

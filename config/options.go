@@ -1,9 +1,9 @@
 package config
 
 import (
-	"go-micro.dev/v5/config/loader"
-	"go-micro.dev/v5/config/reader"
-	"go-micro.dev/v5/config/source"
+	"micro.labqa.pp.ua/v5/config/loader"
+	"micro.labqa.pp.ua/v5/config/reader"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 // WithLoader sets the loader for manager config.

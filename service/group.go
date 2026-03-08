@@ -6,8 +6,8 @@ import (
 	"os/signal"
 	"sync"
 
-	log "go-micro.dev/v5/logger"
-	signalutil "go-micro.dev/v5/internal/util/signal"
+	log "micro.labqa.pp.ua/v5/logger"
+	signalutil "micro.labqa.pp.ua/v5/internal/util/signal"
 )
 
 // Group runs multiple services in a single binary with shared

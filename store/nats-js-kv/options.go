@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/nats-io/nats.go"
-	"go-micro.dev/v5/store"
+	"micro.labqa.pp.ua/v5/store"
 )
 
 // store.Option.

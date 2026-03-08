@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"go-micro.dev/v5/config/source"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 func TestValues(t *testing.T) {

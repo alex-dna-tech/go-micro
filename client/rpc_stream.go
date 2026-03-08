@@ -6,7 +6,7 @@ import (
 	"io"
 	"sync"
 
-	"go-micro.dev/v5/codec"
+	"micro.labqa.pp.ua/v5/codec"
 )
 
 // Implements the streamer interface.

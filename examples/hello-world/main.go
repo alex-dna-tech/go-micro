@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"go-micro.dev/v5"
+	"micro.labqa.pp.ua/v5"
 )
 
 // Request and Response types

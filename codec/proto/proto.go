@@ -5,7 +5,7 @@ import (
 	"io"
 
 	"github.com/golang/protobuf/proto"
-	"go-micro.dev/v5/codec"
+	"micro.labqa.pp.ua/v5/codec"
 )
 
 type Codec struct {

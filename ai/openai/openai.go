@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"strings"
 
-	"go-micro.dev/v5/ai"
+	"micro.labqa.pp.ua/v5/ai"
 )
 
 func init() {

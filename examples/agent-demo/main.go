@@ -19,9 +19,9 @@ import (
 	"sync"
 	"time"
 
-	"go-micro.dev/v5"
-	"go-micro.dev/v5/gateway/mcp"
-	"go-micro.dev/v5/server"
+	"micro.labqa.pp.ua/v5"
+	"micro.labqa.pp.ua/v5/gateway/mcp"
+	"micro.labqa.pp.ua/v5/server"
 )
 
 // ---------------------------------------------------------------------------

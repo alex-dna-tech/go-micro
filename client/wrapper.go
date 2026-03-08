@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 
-	"go-micro.dev/v5/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // CallFunc represents the individual call func.

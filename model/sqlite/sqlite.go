@@ -13,7 +13,7 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 
-	"go-micro.dev/v5/model"
+	"micro.labqa.pp.ua/v5/model"
 )
 
 type sqliteModel struct {

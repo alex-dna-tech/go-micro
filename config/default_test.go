@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"go-micro.dev/v5/config/source"
-	"go-micro.dev/v5/config/source/env"
-	"go-micro.dev/v5/config/source/file"
-	"go-micro.dev/v5/config/source/memory"
+	"micro.labqa.pp.ua/v5/config/source"
+	"micro.labqa.pp.ua/v5/config/source/env"
+	"micro.labqa.pp.ua/v5/config/source/file"
+	"micro.labqa.pp.ua/v5/config/source/memory"
 )
 
 func createFileForIssue18(t *testing.T, content string) *os.File {

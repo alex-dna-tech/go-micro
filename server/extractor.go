@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strings"
 
-	"go-micro.dev/v5/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 func extractValue(v reflect.Type, d int) *registry.Value {

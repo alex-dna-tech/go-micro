@@ -5,7 +5,7 @@ import (
 	"crypto/tls"
 	"time"
 
-	"go-micro.dev/v5/logger"
+	"micro.labqa.pp.ua/v5/logger"
 )
 
 type Options struct {

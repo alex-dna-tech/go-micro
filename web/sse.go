@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"go-micro.dev/v5/events"
-	log "go-micro.dev/v5/logger"
+	"micro.labqa.pp.ua/v5/events"
+	log "micro.labqa.pp.ua/v5/logger"
 )
 
 // SSEClient represents a connected SSE client

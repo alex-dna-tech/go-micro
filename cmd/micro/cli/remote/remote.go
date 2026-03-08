@@ -11,7 +11,7 @@ import (
 	"syscall"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v5/cmd"
+	"micro.labqa.pp.ua/v5/cmd"
 )
 
 const defaultRemotePath = "/opt/micro"

@@ -4,7 +4,7 @@ package selector
 import (
 	"errors"
 
-	"go-micro.dev/v5/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // Selector builds on the registry as a mechanism to pick nodes

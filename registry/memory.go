@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	log "go-micro.dev/v5/logger"
+	log "micro.labqa.pp.ua/v5/logger"
 )
 
 var (
