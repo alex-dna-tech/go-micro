@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 const (

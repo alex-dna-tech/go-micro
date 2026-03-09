@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"time"
 
-	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/logger"
 )
 
 // Options which are used to configure the nats stream.

@@ -1,7 +1,7 @@
 package noop
 
 import (
-	"micro.labqa.pp.ua/v5/debug/log"
+	"micro.labqa.pp.ua/debug/log"
 )
 
 type noop struct{}

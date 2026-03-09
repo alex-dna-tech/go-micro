@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/hashicorp/consul/api"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 func TestHealthyServiceHandler(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/logger"
 )
 
 // Options represents the options for the cache.

@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"github.com/urfave/cli/v2"
-	"micro.labqa.pp.ua/v5/cmd"
+	"micro.labqa.pp.ua/cmd"
 )
 
 const systemdTemplate = `[Unit]

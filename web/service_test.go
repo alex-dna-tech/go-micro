@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 func TestService(t *testing.T) {

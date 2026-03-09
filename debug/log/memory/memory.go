@@ -4,8 +4,8 @@ package memory
 import (
 	"fmt"
 
-	"micro.labqa.pp.ua/v5/debug/log"
-	"micro.labqa.pp.ua/v5/internal/util/ring"
+	"micro.labqa.pp.ua/debug/log"
+	"micro.labqa.pp.ua/internal/util/ring"
 )
 
 var (

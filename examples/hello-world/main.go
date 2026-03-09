@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"micro.labqa.pp.ua/v5"
+	"micro.labqa.pp.ua"
 )
 
 // Request and Response types

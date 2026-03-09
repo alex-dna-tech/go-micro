@@ -4,7 +4,7 @@ package socket
 import (
 	"io"
 
-	"micro.labqa.pp.ua/v5/transport"
+	"micro.labqa.pp.ua/transport"
 )
 
 // Socket is our pseudo socket for transport.Socket.

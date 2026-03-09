@@ -9,7 +9,7 @@ import (
 	"github.com/google/uuid"
 	"github.com/nats-io/nats.go"
 	"github.com/pkg/errors"
-	"micro.labqa.pp.ua/v5/store"
+	"micro.labqa.pp.ua/store"
 )
 
 func TestNats(t *testing.T) {

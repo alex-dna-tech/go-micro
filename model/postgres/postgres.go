@@ -12,7 +12,7 @@ import (
 
 	_ "github.com/lib/pq"
 
-	"micro.labqa.pp.ua/v5/model"
+	"micro.labqa.pp.ua/model"
 )
 
 type postgresModel struct {

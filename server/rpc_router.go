@@ -12,9 +12,9 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"micro.labqa.pp.ua/v5/codec"
-	merrors "micro.labqa.pp.ua/v5/errors"
-	log "micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/codec"
+	merrors "micro.labqa.pp.ua/errors"
+	log "micro.labqa.pp.ua/logger"
 )
 
 var (

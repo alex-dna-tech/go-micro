@@ -3,7 +3,7 @@ package token
 import (
 	"time"
 
-	"micro.labqa.pp.ua/v5/store"
+	"micro.labqa.pp.ua/store"
 )
 
 type Options struct {

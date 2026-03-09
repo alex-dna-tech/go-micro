@@ -6,8 +6,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"micro.labqa.pp.ua/v5/registry"
-	"micro.labqa.pp.ua/v5/registry/cache"
+	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/registry/cache"
 )
 
 type registrySelector struct {

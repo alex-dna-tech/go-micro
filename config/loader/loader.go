@@ -4,8 +4,8 @@ package loader
 import (
 	"context"
 
-	"micro.labqa.pp.ua/v5/config/reader"
-	"micro.labqa.pp.ua/v5/config/source"
+	"micro.labqa.pp.ua/config/reader"
+	"micro.labqa.pp.ua/config/source"
 )
 
 // Loader manages loading sources.

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/urfave/cli/v2"
-	"micro.labqa.pp.ua/v5/config/source"
+	"micro.labqa.pp.ua/config/source"
 )
 
 type contextKey struct{}

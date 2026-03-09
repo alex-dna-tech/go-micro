@@ -3,7 +3,7 @@ package cache
 import (
 	"time"
 
-	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/logger"
 )
 
 // WithTTL sets the cache TTL.

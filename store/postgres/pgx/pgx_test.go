@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"micro.labqa.pp.ua/v5/store"
+	"micro.labqa.pp.ua/store"
 )
 
 type testObj struct {

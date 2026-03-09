@@ -1,9 +1,9 @@
 package server
 
 import (
-	"micro.labqa.pp.ua/v5/broker"
-	"micro.labqa.pp.ua/v5/transport"
-	"micro.labqa.pp.ua/v5/transport/headers"
+	"micro.labqa.pp.ua/broker"
+	"micro.labqa.pp.ua/transport"
+	"micro.labqa.pp.ua/transport/headers"
 )
 
 // event is a broker event we handle on the server transport.

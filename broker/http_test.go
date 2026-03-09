@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"micro.labqa.pp.ua/v5/broker"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/broker"
+	"micro.labqa.pp.ua/registry"
 )
 
 var (

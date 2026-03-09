@@ -13,15 +13,15 @@ import (
 	"time"
 
 	"github.com/urfave/cli/v2"
-	"micro.labqa.pp.ua/v5"
-	log "micro.labqa.pp.ua/v5/logger"
-	"micro.labqa.pp.ua/v5/registry"
-	maddr "micro.labqa.pp.ua/v5/internal/util/addr"
-	"micro.labqa.pp.ua/v5/internal/util/backoff"
-	mhttp "micro.labqa.pp.ua/v5/internal/util/http"
-	mnet "micro.labqa.pp.ua/v5/internal/util/net"
-	signalutil "micro.labqa.pp.ua/v5/internal/util/signal"
-	mls "micro.labqa.pp.ua/v5/internal/util/tls"
+	"micro.labqa.pp.ua"
+	log "micro.labqa.pp.ua/logger"
+	"micro.labqa.pp.ua/registry"
+	maddr "micro.labqa.pp.ua/internal/util/addr"
+	"micro.labqa.pp.ua/internal/util/backoff"
+	mhttp "micro.labqa.pp.ua/internal/util/http"
+	mnet "micro.labqa.pp.ua/internal/util/net"
+	signalutil "micro.labqa.pp.ua/internal/util/signal"
+	mls "micro.labqa.pp.ua/internal/util/tls"
 )
 
 type service struct {

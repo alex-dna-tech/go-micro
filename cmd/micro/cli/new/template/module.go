@@ -6,7 +6,7 @@ var (
 go 1.22
 
 require (
-	micro.labqa.pp.ua/v5 latest
+	micro.labqa.pp.ua latest
 	github.com/golang/protobuf latest
 	google.golang.org/protobuf latest
 )

@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"micro.labqa.pp.ua/v5/broker"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/broker"
+	"micro.labqa.pp.ua/registry"
 )
 
 // TestSubscriberNoDuplicates verifies that when multiple subscribers are registered

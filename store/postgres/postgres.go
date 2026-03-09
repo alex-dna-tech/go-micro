@@ -31,8 +31,8 @@ import (
 
 	"github.com/lib/pq"
 	"github.com/pkg/errors"
-	"micro.labqa.pp.ua/v5/logger"
-	"micro.labqa.pp.ua/v5/store"
+	"micro.labqa.pp.ua/logger"
+	"micro.labqa.pp.ua/store"
 )
 
 // DefaultDatabase is the namespace that the sql store

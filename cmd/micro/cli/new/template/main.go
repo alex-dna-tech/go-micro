@@ -7,8 +7,8 @@ import (
 	"{{.Dir}}/handler"
 	pb "{{.Dir}}/proto"
 
-	"micro.labqa.pp.ua/v5"
-	"micro.labqa.pp.ua/v5/gateway/mcp"
+	"micro.labqa.pp.ua"
+	"micro.labqa.pp.ua/gateway/mcp"
 )
 
 func main() {
@@ -34,7 +34,7 @@ import (
 	"{{.Dir}}/handler"
 	pb "{{.Dir}}/proto"
 
-	"micro.labqa.pp.ua/v5"
+	"micro.labqa.pp.ua"
 )
 
 func main() {

@@ -7,15 +7,15 @@ import (
 	"github.com/oxtoacart/bpool"
 	"github.com/pkg/errors"
 
-	"micro.labqa.pp.ua/v5/codec"
-	raw "micro.labqa.pp.ua/v5/codec/bytes"
-	"micro.labqa.pp.ua/v5/codec/grpc"
-	"micro.labqa.pp.ua/v5/codec/json"
-	"micro.labqa.pp.ua/v5/codec/jsonrpc"
-	"micro.labqa.pp.ua/v5/codec/proto"
-	"micro.labqa.pp.ua/v5/codec/protorpc"
-	"micro.labqa.pp.ua/v5/transport"
-	"micro.labqa.pp.ua/v5/transport/headers"
+	"micro.labqa.pp.ua/codec"
+	raw "micro.labqa.pp.ua/codec/bytes"
+	"micro.labqa.pp.ua/codec/grpc"
+	"micro.labqa.pp.ua/codec/json"
+	"micro.labqa.pp.ua/codec/jsonrpc"
+	"micro.labqa.pp.ua/codec/proto"
+	"micro.labqa.pp.ua/codec/protorpc"
+	"micro.labqa.pp.ua/transport"
+	"micro.labqa.pp.ua/transport/headers"
 )
 
 type rpcCodec struct {

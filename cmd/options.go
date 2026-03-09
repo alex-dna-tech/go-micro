@@ -3,19 +3,19 @@ package cmd
 import (
 	"context"
 
-	"micro.labqa.pp.ua/v5/auth"
-	"micro.labqa.pp.ua/v5/broker"
-	"micro.labqa.pp.ua/v5/cache"
-	"micro.labqa.pp.ua/v5/client"
-	"micro.labqa.pp.ua/v5/config"
-	"micro.labqa.pp.ua/v5/debug/profile"
-	"micro.labqa.pp.ua/v5/debug/trace"
-	"micro.labqa.pp.ua/v5/events"
-	"micro.labqa.pp.ua/v5/registry"
-	"micro.labqa.pp.ua/v5/selector"
-	"micro.labqa.pp.ua/v5/server"
-	"micro.labqa.pp.ua/v5/store"
-	"micro.labqa.pp.ua/v5/transport"
+	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/broker"
+	"micro.labqa.pp.ua/cache"
+	"micro.labqa.pp.ua/client"
+	"micro.labqa.pp.ua/config"
+	"micro.labqa.pp.ua/debug/profile"
+	"micro.labqa.pp.ua/debug/trace"
+	"micro.labqa.pp.ua/events"
+	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/selector"
+	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/store"
+	"micro.labqa.pp.ua/transport"
 )
 
 type Options struct {

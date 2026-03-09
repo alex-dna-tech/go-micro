@@ -3,7 +3,7 @@
 package memory
 
 import (
-	"micro.labqa.pp.ua/v5/model"
+	"micro.labqa.pp.ua/model"
 )
 
 // New creates a new in-memory model.

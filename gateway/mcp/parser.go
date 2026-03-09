@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"strings"
 
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 // ToolDescription represents enhanced documentation for an MCP tool

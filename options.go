@@ -1,7 +1,7 @@
 package micro
 
 import (
-	"micro.labqa.pp.ua/v5/service"
+	"micro.labqa.pp.ua/service"
 )
 
 var Broker = service.Broker

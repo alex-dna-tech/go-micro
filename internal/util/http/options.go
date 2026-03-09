@@ -1,7 +1,7 @@
 package http
 
 import (
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 type Options struct {

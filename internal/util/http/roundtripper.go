@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"micro.labqa.pp.ua/v5/selector"
+	"micro.labqa.pp.ua/selector"
 )
 
 type roundTripper struct {

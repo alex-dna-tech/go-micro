@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 func TestRoundTripper(t *testing.T) {

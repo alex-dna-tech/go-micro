@@ -31,12 +31,12 @@ import (
 	"syscall"
 	"time"
 
-	"micro.labqa.pp.ua/v5/auth"
-	"micro.labqa.pp.ua/v5/auth/jwt"
-	"micro.labqa.pp.ua/v5/gateway/mcp"
-	"micro.labqa.pp.ua/v5/registry"
-	"micro.labqa.pp.ua/v5/registry/consul"
-	"micro.labqa.pp.ua/v5/registry/etcd"
+	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/auth/jwt"
+	"micro.labqa.pp.ua/gateway/mcp"
+	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/registry/consul"
+	"micro.labqa.pp.ua/registry/etcd"
 
 	"github.com/urfave/cli/v2"
 )

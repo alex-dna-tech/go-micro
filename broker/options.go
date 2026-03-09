@@ -4,9 +4,9 @@ import (
 	"context"
 	"crypto/tls"
 
-	"micro.labqa.pp.ua/v5/codec"
-	"micro.labqa.pp.ua/v5/logger"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/codec"
+	"micro.labqa.pp.ua/logger"
+	"micro.labqa.pp.ua/registry"
 )
 
 type Options struct {

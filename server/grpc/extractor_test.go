@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 type testHandler struct{}

@@ -15,7 +15,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 	"github.com/xlab/treeprint"
-	tmpl "micro.labqa.pp.ua/v5/cmd/micro/cli/new/template"
+	tmpl "micro.labqa.pp.ua/cmd/micro/cli/new/template"
 )
 
 func protoComments(goDir, alias string) []string {

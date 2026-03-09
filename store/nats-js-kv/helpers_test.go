@@ -14,7 +14,7 @@ import (
 	nserver "github.com/nats-io/nats-server/v2/server"
 	"github.com/pkg/errors"
 	"github.com/test-go/testify/require"
-	"micro.labqa.pp.ua/v5/store"
+	"micro.labqa.pp.ua/store"
 )
 
 func testSetup(ctx context.Context, t *testing.T, opts ...store.Option) store.Store {

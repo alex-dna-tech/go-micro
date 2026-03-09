@@ -4,7 +4,7 @@ import (
 	"context"
 
 	rclient "github.com/go-redis/redis/v8"
-	"micro.labqa.pp.ua/v5/cache"
+	"micro.labqa.pp.ua/cache"
 )
 
 type redisOptionsContextKey struct{}

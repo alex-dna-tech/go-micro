@@ -5,7 +5,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/oxtoacart/bpool"
-	"micro.labqa.pp.ua/v5/codec"
+	"micro.labqa.pp.ua/codec"
 )
 
 // create buffer pool with 16 instances each preallocated with 256 bytes.

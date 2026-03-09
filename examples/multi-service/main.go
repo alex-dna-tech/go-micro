@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"log"
 
-	"micro.labqa.pp.ua/v5"
+	"micro.labqa.pp.ua"
 )
 
 // -- Users service --

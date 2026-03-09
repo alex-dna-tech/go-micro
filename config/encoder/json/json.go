@@ -3,7 +3,7 @@ package json
 import (
 	"encoding/json"
 
-	"micro.labqa.pp.ua/v5/config/encoder"
+	"micro.labqa.pp.ua/config/encoder"
 )
 
 type jsonEncoder struct{}

@@ -8,7 +8,7 @@ import (
 	"runtime/pprof"
 	"sync"
 
-	"micro.labqa.pp.ua/v5/debug/profile"
+	"micro.labqa.pp.ua/debug/profile"
 )
 
 type profiler struct {

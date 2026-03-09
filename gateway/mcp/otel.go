@@ -3,7 +3,7 @@ package mcp
 import (
 	"context"
 
-	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/metadata"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
@@ -11,7 +11,7 @@ import (
 	"go.opentelemetry.io/otel/trace"
 )
 
-const instrumentationName = "micro.labqa.pp.ua/v5/gateway/mcp"
+const instrumentationName = "micro.labqa.pp.ua/gateway/mcp"
 
 // Span and attribute names for MCP OpenTelemetry integration.
 const (

@@ -25,11 +25,11 @@ import (
 	"sync"
 	"time"
 
-	"micro.labqa.pp.ua/v5/auth"
-	"micro.labqa.pp.ua/v5/client"
-	"micro.labqa.pp.ua/v5/codec/bytes"
-	"micro.labqa.pp.ua/v5/metadata"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/client"
+	"micro.labqa.pp.ua/codec/bytes"
+	"micro.labqa.pp.ua/metadata"
+	"micro.labqa.pp.ua/registry"
 
 	"github.com/google/uuid"
 	"go.opentelemetry.io/otel/attribute"

@@ -8,8 +8,8 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/pkg/errors"
-	"micro.labqa.pp.ua/v5/logger"
-	"micro.labqa.pp.ua/v5/store"
+	"micro.labqa.pp.ua/logger"
+	"micro.labqa.pp.ua/store"
 )
 
 // NewStream returns an initialized memory stream

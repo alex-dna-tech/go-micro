@@ -9,7 +9,7 @@ import (
 	"text/template"
 
 	"github.com/urfave/cli/v2"
-	"micro.labqa.pp.ua/v5/cmd"
+	"micro.labqa.pp.ua/cmd"
 )
 
 var handlerTemplate = `package handler
@@ -17,7 +17,7 @@ var handlerTemplate = `package handler
 import (
 	"context"
 
-	log "micro.labqa.pp.ua/v5/logger"
+	log "micro.labqa.pp.ua/logger"
 )
 
 type {{.Name}} struct{}
@@ -43,7 +43,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	log "micro.labqa.pp.ua/v5/logger"
+	log "micro.labqa.pp.ua/logger"
 )
 
 // {{.Name}}Request is the request for {{.Name}}

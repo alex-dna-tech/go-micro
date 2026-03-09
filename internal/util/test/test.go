@@ -1,7 +1,7 @@
 package test
 
 import (
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 var (

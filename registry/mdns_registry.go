@@ -16,8 +16,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	log "micro.labqa.pp.ua/v5/logger"
-	"micro.labqa.pp.ua/v5/internal/util/mdns"
+	log "micro.labqa.pp.ua/logger"
+	"micro.labqa.pp.ua/internal/util/mdns"
 )
 
 var (

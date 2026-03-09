@@ -13,11 +13,11 @@ import (
 	"time"
 
 	"github.com/urfave/cli/v2"
-	"micro.labqa.pp.ua/v5/client"
-	"micro.labqa.pp.ua/v5/cmd"
-	"micro.labqa.pp.ua/v5/codec/bytes"
-	"micro.labqa.pp.ua/v5/gateway/mcp"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/client"
+	"micro.labqa.pp.ua/cmd"
+	"micro.labqa.pp.ua/codec/bytes"
+	"micro.labqa.pp.ua/gateway/mcp"
+	"micro.labqa.pp.ua/registry"
 )
 
 func init() {

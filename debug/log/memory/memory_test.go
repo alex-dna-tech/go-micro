@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"micro.labqa.pp.ua/v5/debug/log"
+	"micro.labqa.pp.ua/debug/log"
 )
 
 func TestLogger(t *testing.T) {

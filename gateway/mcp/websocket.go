@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"micro.labqa.pp.ua/v5/auth"
-	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/metadata"
 
 	"github.com/google/uuid"
 	"github.com/gorilla/websocket"

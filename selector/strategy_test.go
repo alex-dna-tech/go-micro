@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/registry"
 )
 
 func TestStrategies(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	"micro.labqa.pp.ua/v5/auth"
-	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/metadata"
 )
 
 const (

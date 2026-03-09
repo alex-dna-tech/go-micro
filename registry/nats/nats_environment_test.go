@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
-	log "micro.labqa.pp.ua/v5/logger"
-	"micro.labqa.pp.ua/v5/registry"
-	"micro.labqa.pp.ua/v5/registry/nats"
+	log "micro.labqa.pp.ua/logger"
+	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/registry/nats"
 )
 
 type environment struct {

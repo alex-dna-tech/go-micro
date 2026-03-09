@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"micro.labqa.pp.ua/v5/internal/util/ring"
+	"micro.labqa.pp.ua/internal/util/ring"
 )
 
 type stats struct {

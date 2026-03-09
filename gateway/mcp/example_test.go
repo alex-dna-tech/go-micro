@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"micro.labqa.pp.ua/v5"
-	"micro.labqa.pp.ua/v5/auth/jwt"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua"
+	"micro.labqa.pp.ua/auth/jwt"
+	"micro.labqa.pp.ua/registry"
 )
 
 // Example_withMCP shows the simplest way to add MCP to a service using WithMCP

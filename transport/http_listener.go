@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	log "micro.labqa.pp.ua/v5/logger"
+	log "micro.labqa.pp.ua/logger"
 
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"

@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"micro.labqa.pp.ua/v5/transport"
+	"micro.labqa.pp.ua/transport"
 )
 
 type pool struct {

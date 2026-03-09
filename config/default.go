@@ -3,11 +3,11 @@ package config
 import (
 	"bytes"
 	"fmt"
-	"micro.labqa.pp.ua/v5/config/loader"
-	"micro.labqa.pp.ua/v5/config/loader/memory"
-	"micro.labqa.pp.ua/v5/config/reader"
-	"micro.labqa.pp.ua/v5/config/reader/json"
-	"micro.labqa.pp.ua/v5/config/source"
+	"micro.labqa.pp.ua/config/loader"
+	"micro.labqa.pp.ua/config/loader/memory"
+	"micro.labqa.pp.ua/config/reader"
+	"micro.labqa.pp.ua/config/reader/json"
+	"micro.labqa.pp.ua/config/source"
 	"sync"
 	"time"
 )

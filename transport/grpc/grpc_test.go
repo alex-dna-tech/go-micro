@@ -4,7 +4,7 @@ import (
 	"net"
 	"testing"
 
-	"micro.labqa.pp.ua/v5/transport"
+	"micro.labqa.pp.ua/transport"
 )
 
 func expectedPort(t *testing.T, expected string, lsn transport.Listener) {

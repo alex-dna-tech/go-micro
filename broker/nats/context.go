@@ -3,7 +3,7 @@ package nats
 import (
 	"context"
 
-	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/broker"
 )
 
 // setBrokerOption returns a function to setup a context with given value.

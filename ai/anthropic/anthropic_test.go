@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"micro.labqa.pp.ua/v5/ai"
+	"micro.labqa.pp.ua/ai"
 )
 
 func TestProvider_String(t *testing.T) {

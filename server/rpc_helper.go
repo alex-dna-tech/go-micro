@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"micro.labqa.pp.ua/v5/codec"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/codec"
+	"micro.labqa.pp.ua/registry"
 )
 
 // setRegistered will set the service as registered safely.

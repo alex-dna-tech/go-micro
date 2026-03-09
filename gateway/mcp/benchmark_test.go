@@ -9,9 +9,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"micro.labqa.pp.ua/v5/auth"
-	"micro.labqa.pp.ua/v5/client"
-	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/client"
+	"micro.labqa.pp.ua/registry"
 )
 
 // benchServer creates a Server with N pre-populated tools.

@@ -3,7 +3,7 @@ package pool
 import (
 	"time"
 
-	"micro.labqa.pp.ua/v5/transport"
+	"micro.labqa.pp.ua/transport"
 )
 
 type Options struct {

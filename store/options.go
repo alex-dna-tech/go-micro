@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"micro.labqa.pp.ua/v5/client"
-	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/client"
+	"micro.labqa.pp.ua/logger"
 )
 
 // Options contains configuration for the Store.
