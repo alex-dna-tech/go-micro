@@ -4,7 +4,7 @@ package selector
 import (
 	"errors"
 
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // Selector builds on the registry as a mechanism to pick nodes

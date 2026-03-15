@@ -1,8 +1,8 @@
 package grpc
 
 import (
-	"micro.labqa.pp.ua/transport"
-	pb "micro.labqa.pp.ua/transport/grpc/proto"
+	"micro.labqa.pp.ua/v5/transport"
+	pb "micro.labqa.pp.ua/v5/transport/grpc/proto"
 	"google.golang.org/grpc"
 )
 

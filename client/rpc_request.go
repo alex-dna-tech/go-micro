@@ -1,7 +1,7 @@
 package client
 
 import (
-	"micro.labqa.pp.ua/codec"
+	"micro.labqa.pp.ua/v5/codec"
 )
 
 type rpcRequest struct {

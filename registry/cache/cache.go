@@ -9,9 +9,9 @@ import (
 
 	"golang.org/x/sync/singleflight"
 
-	log "micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/registry"
-	util "micro.labqa.pp.ua/internal/util/registry"
+	log "micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/registry"
+	util "micro.labqa.pp.ua/v5/internal/util/registry"
 )
 
 // Cache is the registry cache interface.

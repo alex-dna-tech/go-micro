@@ -3,7 +3,7 @@ package grpc
 import (
 	"context"
 
-	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/v5/server"
 )
 
 func setServerOption(k, v interface{}) server.Option {

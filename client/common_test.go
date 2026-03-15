@@ -1,7 +1,7 @@
 package client
 
 import (
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 var (

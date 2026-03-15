@@ -6,8 +6,8 @@ import (
 	"net"
 	"time"
 
-	"micro.labqa.pp.ua/codec"
-	"micro.labqa.pp.ua/logger"
+	"micro.labqa.pp.ua/v5/codec"
+	"micro.labqa.pp.ua/v5/logger"
 )
 
 var (

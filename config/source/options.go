@@ -3,9 +3,9 @@ package source
 import (
 	"context"
 
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/config/encoder"
-	"micro.labqa.pp.ua/config/encoder/json"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/config/encoder"
+	"micro.labqa.pp.ua/v5/config/encoder/json"
 )
 
 type Options struct {

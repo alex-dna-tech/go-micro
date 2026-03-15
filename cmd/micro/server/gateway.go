@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"micro.labqa.pp.ua/gateway/api"
-	"micro.labqa.pp.ua/registry"
-	"micro.labqa.pp.ua/store"
+	"micro.labqa.pp.ua/v5/gateway/api"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/store"
 )
 
 // GatewayOptions configures the HTTP gateway (legacy compatibility)

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/v5/auth"
 
 	"github.com/gorilla/websocket"
 )

@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"micro.labqa.pp.ua/config/source"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 type strippedPrefixKey struct{}

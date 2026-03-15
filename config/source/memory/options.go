@@ -3,7 +3,7 @@ package memory
 import (
 	"context"
 
-	"micro.labqa.pp.ua/config/source"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 type changeSetKey struct{}

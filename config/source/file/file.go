@@ -6,7 +6,7 @@ import (
 	"io/fs"
 	"os"
 
-	"micro.labqa.pp.ua/config/source"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 type file struct {

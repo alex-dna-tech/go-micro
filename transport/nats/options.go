@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/nats-io/nats.go"
-	"micro.labqa.pp.ua/transport"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 type optionsKey struct{}

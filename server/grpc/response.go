@@ -1,7 +1,7 @@
 package grpc
 
 import (
-	"micro.labqa.pp.ua/codec"
+	"micro.labqa.pp.ua/v5/codec"
 )
 
 type rpcResponse struct {

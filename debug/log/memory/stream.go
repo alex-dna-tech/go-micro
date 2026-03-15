@@ -1,7 +1,7 @@
 package memory
 
 import (
-	"micro.labqa.pp.ua/debug/log"
+	"micro.labqa.pp.ua/v5/debug/log"
 )
 
 type logStream struct {

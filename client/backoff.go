@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"micro.labqa.pp.ua/internal/util/backoff"
+	"micro.labqa.pp.ua/v5/internal/util/backoff"
 )
 
 type BackoffFunc func(ctx context.Context, req Request, attempts int) (time.Duration, error)

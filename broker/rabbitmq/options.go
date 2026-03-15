@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"micro.labqa.pp.ua/broker"
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/server"
 )
 
 type durableQueueKey struct{}

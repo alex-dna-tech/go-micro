@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	maddr "micro.labqa.pp.ua/internal/util/addr"
-	mnet "micro.labqa.pp.ua/internal/util/net"
+	maddr "micro.labqa.pp.ua/v5/internal/util/addr"
+	mnet "micro.labqa.pp.ua/v5/internal/util/net"
 )
 
 type memorySocket struct {

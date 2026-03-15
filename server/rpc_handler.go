@@ -3,7 +3,7 @@ package server
 import (
 	"reflect"
 
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 type RpcHandler struct {

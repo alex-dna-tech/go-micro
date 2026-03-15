@@ -76,7 +76,7 @@ func (s *Users) CreateUser(ctx context.Context, req *CreateRequest, rsp *CreateR
 }
 ` + "```" + `
 
-See the [tool descriptions guide](https://micro.labqa.pp.ua/docs/guides/tool-descriptions) for more tips.
+See the [tool descriptions guide](https://micro.labqa.pp.ua/v5/docs/guides/tool-descriptions) for more tips.
 
 ## Development
 

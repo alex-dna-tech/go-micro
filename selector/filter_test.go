@@ -3,7 +3,7 @@ package selector
 import (
 	"testing"
 
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 func TestFilterEndpoint(t *testing.T) {

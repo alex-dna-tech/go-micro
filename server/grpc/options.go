@@ -5,12 +5,12 @@ import (
 	"crypto/tls"
 	"net"
 
-	"micro.labqa.pp.ua/broker"
-	"micro.labqa.pp.ua/codec"
-	"micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/registry"
-	"micro.labqa.pp.ua/server"
-	"micro.labqa.pp.ua/transport"
+	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/v5/codec"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/server"
+	"micro.labqa.pp.ua/v5/transport"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding"
 )

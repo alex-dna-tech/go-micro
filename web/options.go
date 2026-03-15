@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/urfave/cli/v2"
-	"micro.labqa.pp.ua"
-	"micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // Options for web.

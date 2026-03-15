@@ -11,8 +11,8 @@ import (
 	nserver "github.com/nats-io/nats-server/v2/server"
 	"github.com/stretchr/testify/assert"
 	"github.com/test-go/testify/require"
-	"micro.labqa.pp.ua/events"
-	"micro.labqa.pp.ua/events/natsjs"
+	"micro.labqa.pp.ua/v5/events"
+	"micro.labqa.pp.ua/v5/events/natsjs"
 )
 
 type Payload struct {

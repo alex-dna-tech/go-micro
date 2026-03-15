@@ -1,7 +1,7 @@
 package registry
 
 import (
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 func addNodes(old, neu []*registry.Node) []*registry.Node {

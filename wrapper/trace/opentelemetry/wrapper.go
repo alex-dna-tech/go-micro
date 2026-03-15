@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/registry"
-	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/server"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 )

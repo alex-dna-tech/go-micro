@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	"micro.labqa.pp.ua/auth"
-	"micro.labqa.pp.ua/metadata"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/metadata"
 
 	"github.com/google/uuid"
 	"go.opentelemetry.io/otel/attribute"

@@ -4,10 +4,10 @@ package config
 import (
 	"context"
 
-	"micro.labqa.pp.ua/config/loader"
-	"micro.labqa.pp.ua/config/reader"
-	"micro.labqa.pp.ua/config/source"
-	"micro.labqa.pp.ua/config/source/file"
+	"micro.labqa.pp.ua/v5/config/loader"
+	"micro.labqa.pp.ua/v5/config/reader"
+	"micro.labqa.pp.ua/v5/config/source"
+	"micro.labqa.pp.ua/v5/config/source/file"
 )
 
 // Config is an interface abstraction for dynamic configuration.

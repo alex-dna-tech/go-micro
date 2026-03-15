@@ -10,7 +10,7 @@ import (
 	"github.com/cornelk/hashmap"
 	"github.com/nats-io/nats.go"
 	"github.com/pkg/errors"
-	"micro.labqa.pp.ua/store"
+	"micro.labqa.pp.ua/v5/store"
 )
 
 var (

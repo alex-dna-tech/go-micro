@@ -3,7 +3,7 @@ package config
 import (
 	"time"
 
-	"micro.labqa.pp.ua/config/reader"
+	"micro.labqa.pp.ua/v5/config/reader"
 )
 
 type value struct{}

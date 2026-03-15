@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"micro.labqa.pp.ua/model"
+	"micro.labqa.pp.ua/v5/model"
 )
 
 type User struct {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/codec"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/codec"
 )
 
 type grpcRequest struct {

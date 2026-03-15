@@ -14,7 +14,7 @@
 package noop
 
 import (
-	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/v5/auth"
 )
 
 // NewAuth returns a new noop auth provider.

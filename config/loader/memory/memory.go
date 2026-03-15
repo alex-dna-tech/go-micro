@@ -10,10 +10,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"micro.labqa.pp.ua/config/loader"
-	"micro.labqa.pp.ua/config/reader"
-	"micro.labqa.pp.ua/config/reader/json"
-	"micro.labqa.pp.ua/config/source"
+	"micro.labqa.pp.ua/v5/config/loader"
+	"micro.labqa.pp.ua/v5/config/reader"
+	"micro.labqa.pp.ua/v5/config/reader/json"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 type memory struct {

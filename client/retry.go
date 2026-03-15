@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 
-	"micro.labqa.pp.ua/errors"
+	"micro.labqa.pp.ua/v5/errors"
 )
 
 // note that returning either false or a non-nil error will result in the call not being retried.

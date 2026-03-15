@@ -12,8 +12,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	log "micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/internal/util/buf"
+	log "micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/internal/util/buf"
 )
 
 type httpTransportClient struct {

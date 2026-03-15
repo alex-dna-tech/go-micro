@@ -19,9 +19,9 @@ import (
 	"sync"
 	"time"
 
-	"micro.labqa.pp.ua"
-	"micro.labqa.pp.ua/gateway/mcp"
-	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/v5"
+	"micro.labqa.pp.ua/v5/gateway/mcp"
+	"micro.labqa.pp.ua/v5/server"
 )
 
 // ---------------------------------------------------------------------------

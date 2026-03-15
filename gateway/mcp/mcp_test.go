@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"micro.labqa.pp.ua/auth"
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // mockAuth implements auth.Auth for testing.

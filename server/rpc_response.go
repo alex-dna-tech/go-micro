@@ -3,8 +3,8 @@ package server
 import (
 	"net/http"
 
-	"micro.labqa.pp.ua/codec"
-	"micro.labqa.pp.ua/transport"
+	"micro.labqa.pp.ua/v5/codec"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 type rpcResponse struct {

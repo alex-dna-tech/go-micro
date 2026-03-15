@@ -1,7 +1,7 @@
 package grpc
 
 import (
-	"micro.labqa.pp.ua/client"
+	"micro.labqa.pp.ua/v5/client"
 )
 
 type grpcEvent struct {

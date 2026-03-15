@@ -4,7 +4,7 @@ import (
 	"time"
 
 	natsp "github.com/nats-io/nats.go"
-	"micro.labqa.pp.ua/broker"
+	"micro.labqa.pp.ua/v5/broker"
 )
 
 type optionsKey struct{}

@@ -32,11 +32,11 @@ import (
 	"testing"
 	"time"
 
-	"micro.labqa.pp.ua/broker"
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/registry"
-	"micro.labqa.pp.ua/server"
-	"micro.labqa.pp.ua/transport"
+	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/server"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 // Harness provides an in-process test environment for a micro service

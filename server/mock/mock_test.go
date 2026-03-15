@@ -3,7 +3,7 @@ package mock
 import (
 	"testing"
 
-	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/v5/server"
 )
 
 func TestMockServer(t *testing.T) {

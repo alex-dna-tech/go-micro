@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"micro.labqa.pp.ua/web"
+	"micro.labqa.pp.ua/v5/web"
 )
 
 type User struct {

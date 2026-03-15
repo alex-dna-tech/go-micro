@@ -18,10 +18,10 @@ import (
 	"time"
 
 	"github.com/urfave/cli/v2"
-	"micro.labqa.pp.ua/cmd"
-	"micro.labqa.pp.ua/cmd/micro/run/config"
-	"micro.labqa.pp.ua/cmd/micro/run/watcher"
-	"micro.labqa.pp.ua/cmd/micro/server"
+	"micro.labqa.pp.ua/v5/cmd"
+	"micro.labqa.pp.ua/v5/cmd/micro/run/config"
+	"micro.labqa.pp.ua/v5/cmd/micro/run/watcher"
+	"micro.labqa.pp.ua/v5/cmd/micro/server"
 )
 
 // Color codes for log output

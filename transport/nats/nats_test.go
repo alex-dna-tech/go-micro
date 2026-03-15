@@ -8,8 +8,8 @@ import (
 	"log"
 
 	"github.com/nats-io/nats.go"
-	"micro.labqa.pp.ua/server"
-	"micro.labqa.pp.ua/transport"
+	"micro.labqa.pp.ua/v5/server"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 var addrTestCases = []struct {

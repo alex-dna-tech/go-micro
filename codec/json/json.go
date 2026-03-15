@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"io"
 
-	"micro.labqa.pp.ua/codec"
+	"micro.labqa.pp.ua/v5/codec"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )

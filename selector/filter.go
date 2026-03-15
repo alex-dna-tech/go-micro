@@ -1,7 +1,7 @@
 package selector
 
 import (
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // FilterEndpoint is an endpoint based Select Filter which will

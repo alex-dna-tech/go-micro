@@ -6,7 +6,7 @@ import (
 	"io"
 	"sync"
 
-	"micro.labqa.pp.ua/codec"
+	"micro.labqa.pp.ua/v5/codec"
 )
 
 type clientCodec struct {

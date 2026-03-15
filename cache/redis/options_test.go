@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	rclient "github.com/go-redis/redis/v8"
-	"micro.labqa.pp.ua/cache"
+	"micro.labqa.pp.ua/v5/cache"
 )
 
 func Test_newUniversalClient(t *testing.T) {

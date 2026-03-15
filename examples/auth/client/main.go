@@ -6,13 +6,13 @@ import (
 	"log"
 	"os"
 
-	"micro.labqa.pp.ua"
-	"micro.labqa.pp.ua/auth"
-	"micro.labqa.pp.ua/auth/noop"
-	"micro.labqa.pp.ua/client"
-	authWrapper "micro.labqa.pp.ua/wrapper/auth"
+	"micro.labqa.pp.ua/v5"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/auth/noop"
+	"micro.labqa.pp.ua/v5/client"
+	authWrapper "micro.labqa.pp.ua/v5/wrapper/auth"
 
-	pb "micro.labqa.pp.ua/examples/auth/proto"
+	pb "micro.labqa.pp.ua/v5/examples/auth/proto"
 )
 
 func main() {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"micro.labqa.pp.ua/codec"
+	"micro.labqa.pp.ua/v5/codec"
 )
 
 type serverCodec struct {

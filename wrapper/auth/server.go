@@ -3,10 +3,10 @@ package auth
 import (
 	"context"
 
-	"micro.labqa.pp.ua/auth"
-	"micro.labqa.pp.ua/errors"
-	"micro.labqa.pp.ua/metadata"
-	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/errors"
+	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/v5/server"
 )
 
 // HandlerOptions for configuring the auth handler wrapper

@@ -3,9 +3,9 @@ package auth
 import (
 	"context"
 
-	"micro.labqa.pp.ua/auth"
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/metadata"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/metadata"
 )
 
 // ClientOptions for configuring the auth client wrapper

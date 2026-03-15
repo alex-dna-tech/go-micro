@@ -7,11 +7,11 @@ import (
 	"io"
 	"time"
 
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/debug/log"
-	proto "micro.labqa.pp.ua/debug/proto"
-	"micro.labqa.pp.ua/debug/stats"
-	"micro.labqa.pp.ua/debug/trace"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/debug/log"
+	proto "micro.labqa.pp.ua/v5/debug/proto"
+	"micro.labqa.pp.ua/v5/debug/stats"
+	"micro.labqa.pp.ua/v5/debug/trace"
 )
 
 // NewHandler returns an instance of the Debug Handler.

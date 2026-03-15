@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/nats-io/nats.go"
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 type natsRegistry struct {

@@ -3,7 +3,7 @@ package file
 import (
 	"testing"
 
-	"micro.labqa.pp.ua/config/source"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 func TestFormat(t *testing.T) {

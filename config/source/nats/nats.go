@@ -7,8 +7,8 @@ import (
 	"time"
 
 	natsgo "github.com/nats-io/nats.go"
-	"micro.labqa.pp.ua/config/source"
-	log "micro.labqa.pp.ua/logger"
+	"micro.labqa.pp.ua/v5/config/source"
+	log "micro.labqa.pp.ua/v5/logger"
 )
 
 type nats struct {

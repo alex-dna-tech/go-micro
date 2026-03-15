@@ -3,7 +3,7 @@ package micro
 import (
 	"context"
 
-	"micro.labqa.pp.ua/client"
+	"micro.labqa.pp.ua/v5/client"
 )
 
 type event struct {

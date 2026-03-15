@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"micro.labqa.pp.ua/cmd/protoc-gen-micro/generator"
+	"micro.labqa.pp.ua/v5/cmd/protoc-gen-micro/generator"
 	options "google.golang.org/genproto/googleapis/api/annotations"
 	"google.golang.org/protobuf/proto"
 	pb "google.golang.org/protobuf/types/descriptorpb"
@@ -16,9 +16,9 @@ import (
 // relative to the import_prefix of the generator.Generator.
 const (
 	contextPkgPath = "context"
-	clientPkgPath  = "micro.labqa.pp.ua/client"
-	serverPkgPath  = "micro.labqa.pp.ua/server"
-	modelPkgPath   = "micro.labqa.pp.ua/model"
+	clientPkgPath  = "micro.labqa.pp.ua/v5/client"
+	serverPkgPath  = "micro.labqa.pp.ua/v5/server"
+	modelPkgPath   = "micro.labqa.pp.ua/v5/model"
 )
 
 func init() {

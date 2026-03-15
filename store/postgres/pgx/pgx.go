@@ -26,8 +26,8 @@ import (
 	"github.com/jackc/pgx/v4/pgxpool"
 	"github.com/pkg/errors"
 
-	"micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/store"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/store"
 )
 
 const defaultDatabase = "micro"

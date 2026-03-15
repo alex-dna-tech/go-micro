@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"dario.cat/mergo"
-	"micro.labqa.pp.ua/config/encoder"
-	"micro.labqa.pp.ua/config/encoder/json"
-	"micro.labqa.pp.ua/config/reader"
-	"micro.labqa.pp.ua/config/source"
+	"micro.labqa.pp.ua/v5/config/encoder"
+	"micro.labqa.pp.ua/v5/config/encoder/json"
+	"micro.labqa.pp.ua/v5/config/reader"
+	"micro.labqa.pp.ua/v5/config/source"
 )
 
 type jsonReader struct {

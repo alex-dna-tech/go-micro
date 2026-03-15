@@ -1,8 +1,8 @@
 package reader
 
 import (
-	"micro.labqa.pp.ua/config/encoder"
-	"micro.labqa.pp.ua/config/encoder/json"
+	"micro.labqa.pp.ua/v5/config/encoder"
+	"micro.labqa.pp.ua/v5/config/encoder/json"
 )
 
 type Options struct {

@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"sync"
 
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 // Random is a random strategy algorithm for node selection.

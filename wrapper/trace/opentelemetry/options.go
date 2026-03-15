@@ -3,8 +3,8 @@ package opentelemetry
 import (
 	"context"
 
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/server"
 	"go.opentelemetry.io/otel/trace"
 )
 

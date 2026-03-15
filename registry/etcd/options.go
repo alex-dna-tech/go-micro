@@ -3,7 +3,7 @@ package etcd
 import (
 	"context"
 
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 	"go.uber.org/zap"
 )
 

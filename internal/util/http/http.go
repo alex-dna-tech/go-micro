@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"strings"
 
-	"micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/metadata"
-	"micro.labqa.pp.ua/registry"
-	"micro.labqa.pp.ua/selector"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/selector"
 )
 
 // Write sets the status and body on a http ResponseWriter.

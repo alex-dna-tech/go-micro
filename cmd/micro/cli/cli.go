@@ -8,19 +8,19 @@ import (
 	"os/exec"
 
 	"github.com/urfave/cli/v2"
-	"micro.labqa.pp.ua/client"
-	"micro.labqa.pp.ua/cmd"
-	"micro.labqa.pp.ua/codec/bytes"
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/client"
+	"micro.labqa.pp.ua/v5/cmd"
+	"micro.labqa.pp.ua/v5/codec/bytes"
+	"micro.labqa.pp.ua/v5/registry"
 
-	"micro.labqa.pp.ua/cmd/micro/cli/new"
-	"micro.labqa.pp.ua/cmd/micro/cli/util"
+	"micro.labqa.pp.ua/v5/cmd/micro/cli/new"
+	"micro.labqa.pp.ua/v5/cmd/micro/cli/util"
 
 	// Import packages that register commands via init()
-	_ "micro.labqa.pp.ua/cmd/micro/cli/build"
-	_ "micro.labqa.pp.ua/cmd/micro/cli/deploy"
-	_ "micro.labqa.pp.ua/cmd/micro/cli/init"
-	_ "micro.labqa.pp.ua/cmd/micro/cli/remote"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/cli/build"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/cli/deploy"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/cli/init"
+	_ "micro.labqa.pp.ua/v5/cmd/micro/cli/remote"
 )
 
 var (

@@ -6,8 +6,8 @@ package greeter
 import (
 	context "context"
 	fmt "fmt"
-	client "micro.labqa.pp.ua/client"
-	server "micro.labqa.pp.ua/server"
+	client "micro.labqa.pp.ua/v5/client"
+	server "micro.labqa.pp.ua/v5/server"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

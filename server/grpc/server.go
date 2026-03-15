@@ -14,8 +14,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/server"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/server"
 )
 
 var (

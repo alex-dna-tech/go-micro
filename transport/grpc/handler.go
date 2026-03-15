@@ -3,10 +3,10 @@ package grpc
 import (
 	"runtime/debug"
 
-	"micro.labqa.pp.ua/errors"
-	"micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/transport"
-	pb "micro.labqa.pp.ua/transport/grpc/proto"
+	"micro.labqa.pp.ua/v5/errors"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/transport"
+	pb "micro.labqa.pp.ua/v5/transport/grpc/proto"
 	"google.golang.org/grpc/peer"
 )
 

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 func TestEncodingEndpoints(t *testing.T) {

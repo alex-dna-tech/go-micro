@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"micro.labqa.pp.ua/cache"
+	"micro.labqa.pp.ua/v5/cache"
 )
 
 var (

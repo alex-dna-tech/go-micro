@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/registry"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )
 

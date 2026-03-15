@@ -7,8 +7,8 @@ import (
 	"unicode"
 
 	"github.com/pkg/errors"
-	log "micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/store"
+	log "micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/store"
 )
 
 var (

@@ -3,9 +3,9 @@ package server
 import (
 	"bytes"
 
-	"micro.labqa.pp.ua/codec"
-	"micro.labqa.pp.ua/transport"
-	"micro.labqa.pp.ua/internal/util/buf"
+	"micro.labqa.pp.ua/v5/codec"
+	"micro.labqa.pp.ua/v5/transport"
+	"micro.labqa.pp.ua/v5/internal/util/buf"
 )
 
 type rpcRequest struct {

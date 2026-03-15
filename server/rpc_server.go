@@ -13,17 +13,17 @@ import (
 
 	"github.com/pkg/errors"
 
-	"micro.labqa.pp.ua/broker"
-	"micro.labqa.pp.ua/codec"
-	log "micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/metadata"
-	"micro.labqa.pp.ua/registry"
-	"micro.labqa.pp.ua/transport"
-	"micro.labqa.pp.ua/transport/headers"
-	"micro.labqa.pp.ua/internal/util/addr"
-	"micro.labqa.pp.ua/internal/util/backoff"
-	mnet "micro.labqa.pp.ua/internal/util/net"
-	"micro.labqa.pp.ua/internal/util/socket"
+	"micro.labqa.pp.ua/v5/broker"
+	"micro.labqa.pp.ua/v5/codec"
+	log "micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/transport"
+	"micro.labqa.pp.ua/v5/transport/headers"
+	"micro.labqa.pp.ua/v5/internal/util/addr"
+	"micro.labqa.pp.ua/v5/internal/util/backoff"
+	mnet "micro.labqa.pp.ua/v5/internal/util/net"
+	"micro.labqa.pp.ua/v5/internal/util/socket"
 )
 
 type rpcServer struct {

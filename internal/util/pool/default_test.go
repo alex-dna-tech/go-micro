@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"micro.labqa.pp.ua/transport"
+	"micro.labqa.pp.ua/v5/transport"
 )
 
 func testPool(t *testing.T, size int, ttl time.Duration) {

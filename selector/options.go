@@ -3,8 +3,8 @@ package selector
 import (
 	"context"
 
-	"micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/registry"
+	"micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/registry"
 )
 
 type Options struct {

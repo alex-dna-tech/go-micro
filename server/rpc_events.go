@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"micro.labqa.pp.ua/broker"
-	raw "micro.labqa.pp.ua/codec/bytes"
-	log "micro.labqa.pp.ua/logger"
-	"micro.labqa.pp.ua/metadata"
-	"micro.labqa.pp.ua/transport/headers"
+	"micro.labqa.pp.ua/v5/broker"
+	raw "micro.labqa.pp.ua/v5/codec/bytes"
+	log "micro.labqa.pp.ua/v5/logger"
+	"micro.labqa.pp.ua/v5/metadata"
+	"micro.labqa.pp.ua/v5/transport/headers"
 )
 
 // HandleEvent handles inbound messages to the service directly.

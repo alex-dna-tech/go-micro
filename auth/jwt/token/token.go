@@ -4,7 +4,7 @@ import (
 	"errors"
 	"time"
 
-	"micro.labqa.pp.ua/auth"
+	"micro.labqa.pp.ua/v5/auth"
 )
 
 var (

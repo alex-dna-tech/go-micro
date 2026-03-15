@@ -5,8 +5,8 @@ import (
 	"time"
 
 	jwtToken "github.com/micro/plugins/v5/auth/jwt/token"
-	"micro.labqa.pp.ua/auth"
-	"micro.labqa.pp.ua/cmd"
+	"micro.labqa.pp.ua/v5/auth"
+	"micro.labqa.pp.ua/v5/cmd"
 )
 
 func init() {

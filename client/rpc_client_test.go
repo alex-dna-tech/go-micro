@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	"micro.labqa.pp.ua/errors"
-	"micro.labqa.pp.ua/registry"
-	"micro.labqa.pp.ua/selector"
+	"micro.labqa.pp.ua/v5/errors"
+	"micro.labqa.pp.ua/v5/registry"
+	"micro.labqa.pp.ua/v5/selector"
 )
 
 const (
