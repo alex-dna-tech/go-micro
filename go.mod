@@ -1,4 +1,4 @@
-module micro.labqa.pp.ua
+module micro.labqa.pp.ua/v5
 
 go 1.24
 
