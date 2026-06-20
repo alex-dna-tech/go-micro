@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	jwtToken "github.com/micro/plugins/v5/auth/jwt/token"
 	"micro.labqa.pp.ua/v5/auth"
+	jwtToken "micro.labqa.pp.ua/v5/auth/jwt/token"
 	"micro.labqa.pp.ua/v5/cmd"
 )
 
