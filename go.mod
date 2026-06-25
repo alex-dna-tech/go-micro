@@ -1,4 +1,4 @@
-module go-micro.dev/v6
+module micro.labqa.pp.ua/v6
 
 go 1.24
 
