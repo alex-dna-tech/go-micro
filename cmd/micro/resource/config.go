@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/config"
-	"go-micro.dev/v6/config/source/env"
+	"micro.labqa.pp.ua/v6/config"
+	"micro.labqa.pp.ua/v6/config/source/env"
 )
 
 // configCommand exposes the config interface: get, dump.

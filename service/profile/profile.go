@@ -6,17 +6,17 @@ import (
 	"strings"
 
 	natslib "github.com/nats-io/nats.go"
-	"go-micro.dev/v6/broker"
-	"go-micro.dev/v6/broker/nats"
-	"go-micro.dev/v6/events"
-	nevents "go-micro.dev/v6/events/natsjs"
-	"go-micro.dev/v6/registry"
-	nreg "go-micro.dev/v6/registry/nats"
-	"go-micro.dev/v6/store"
-	nstore "go-micro.dev/v6/store/nats-js-kv"
+	"micro.labqa.pp.ua/v6/broker"
+	"micro.labqa.pp.ua/v6/broker/nats"
+	"micro.labqa.pp.ua/v6/events"
+	nevents "micro.labqa.pp.ua/v6/events/natsjs"
+	"micro.labqa.pp.ua/v6/registry"
+	nreg "micro.labqa.pp.ua/v6/registry/nats"
+	"micro.labqa.pp.ua/v6/store"
+	nstore "micro.labqa.pp.ua/v6/store/nats-js-kv"
 
-	"go-micro.dev/v6/transport"
-	ntx "go-micro.dev/v6/transport/nats"
+	"micro.labqa.pp.ua/v6/transport"
+	ntx "micro.labqa.pp.ua/v6/transport/nats"
 )
 
 type Profile struct {

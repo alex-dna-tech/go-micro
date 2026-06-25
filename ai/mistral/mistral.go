@@ -5,7 +5,7 @@
 //
 // Usage:
 //
-//	import _ "go-micro.dev/v6/ai/mistral"
+//	import _ "micro.labqa.pp.ua/v6/ai/mistral"
 //
 //	m := ai.New("mistral",
 //	    ai.WithAPIKey("your-api-key"),
@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"strings"
 
-	"go-micro.dev/v6/ai"
+	"micro.labqa.pp.ua/v6/ai"
 )
 
 func init() {

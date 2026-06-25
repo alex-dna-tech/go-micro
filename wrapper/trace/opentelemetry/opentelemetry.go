@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"go-micro.dev/v6/metadata"
+	"micro.labqa.pp.ua/v6/metadata"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/baggage"
 	"go.opentelemetry.io/otel/propagation"

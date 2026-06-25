@@ -11,8 +11,8 @@ import (
 	"time"
 
 	amqp "github.com/rabbitmq/amqp091-go"
-	mtls "go-micro.dev/v6/internal/util/tls"
-	"go-micro.dev/v6/logger"
+	mtls "micro.labqa.pp.ua/v6/internal/util/tls"
+	"micro.labqa.pp.ua/v6/logger"
 )
 
 type MQExchangeType string

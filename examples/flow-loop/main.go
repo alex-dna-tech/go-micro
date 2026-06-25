@@ -18,7 +18,7 @@ import (
 	"context"
 	"fmt"
 
-	"go-micro.dev/v6"
+	"micro.labqa.pp.ua/v6"
 )
 
 // Draft is the payload carried across iterations via State.Set / State.Scan.

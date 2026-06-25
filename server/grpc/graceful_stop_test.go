@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	micro "go-micro.dev/v6"
-	"go-micro.dev/v6/client"
-	grpcclient "go-micro.dev/v6/client/grpc"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/server"
+	micro "micro.labqa.pp.ua/v6"
+	"micro.labqa.pp.ua/v6/client"
+	grpcclient "micro.labqa.pp.ua/v6/client/grpc"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/server"
 )
 
 type SleepRequest struct {

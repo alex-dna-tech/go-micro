@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/logger"
 )
 
 // Options contains configuration for the Store.

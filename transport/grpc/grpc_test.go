@@ -3,7 +3,7 @@ package grpc
 import (
 	"testing"
 
-	"go-micro.dev/v6/transport"
+	"micro.labqa.pp.ua/v6/transport"
 )
 
 // func TestGRPCTransportPortRange(t *testing.T) {

@@ -3,7 +3,7 @@ package etcd
 import (
 	"context"
 
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/registry"
 	"go.uber.org/zap"
 )
 

@@ -3,10 +3,10 @@ package agent
 import (
 	"context"
 
-	"go-micro.dev/v6/ai"
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/ai"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 // Option configures an Agent.

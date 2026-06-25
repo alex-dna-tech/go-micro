@@ -7,8 +7,8 @@ import (
 	"{{.Dir}}/handler"
 	pb "{{.Dir}}/proto"
 
-	"go-micro.dev/v6"
-	"go-micro.dev/v6/gateway/mcp"
+	"micro.labqa.pp.ua/v6"
+	"micro.labqa.pp.ua/v6/gateway/mcp"
 )
 
 func main() {
@@ -34,7 +34,7 @@ import (
 	"{{.Dir}}/handler"
 	pb "{{.Dir}}/proto"
 
-	"go-micro.dev/v6"
+	"micro.labqa.pp.ua/v6"
 )
 
 func main() {
@@ -59,9 +59,9 @@ func main() {
 import (
 	"{{.Dir}}/handler"
 
-	"go-micro.dev/v6"
-	"go-micro.dev/v6/gateway/mcp"
-	log "go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6"
+	"micro.labqa.pp.ua/v6/gateway/mcp"
+	log "micro.labqa.pp.ua/v6/logger"
 )
 
 func main() {
@@ -88,8 +88,8 @@ func main() {
 import (
 	"{{.Dir}}/handler"
 
-	"go-micro.dev/v6"
-	log "go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6"
+	log "micro.labqa.pp.ua/v6/logger"
 )
 
 func main() {

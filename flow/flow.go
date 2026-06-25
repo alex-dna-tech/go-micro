@@ -31,21 +31,21 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"go-micro.dev/v6/ai"
-	"go-micro.dev/v6/broker"
-	"go-micro.dev/v6/client"
-	codecbytes "go-micro.dev/v6/codec/bytes"
-	"go-micro.dev/v6/logger"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/ai"
+	"micro.labqa.pp.ua/v6/broker"
+	"micro.labqa.pp.ua/v6/client"
+	codecbytes "micro.labqa.pp.ua/v6/codec/bytes"
+	"micro.labqa.pp.ua/v6/logger"
+	"micro.labqa.pp.ua/v6/registry"
 
 	// Register default providers.
-	_ "go-micro.dev/v6/ai/anthropic"
-	_ "go-micro.dev/v6/ai/atlascloud"
-	_ "go-micro.dev/v6/ai/gemini"
-	_ "go-micro.dev/v6/ai/groq"
-	_ "go-micro.dev/v6/ai/mistral"
-	_ "go-micro.dev/v6/ai/openai"
-	_ "go-micro.dev/v6/ai/together"
+	_ "micro.labqa.pp.ua/v6/ai/anthropic"
+	_ "micro.labqa.pp.ua/v6/ai/atlascloud"
+	_ "micro.labqa.pp.ua/v6/ai/gemini"
+	_ "micro.labqa.pp.ua/v6/ai/groq"
+	_ "micro.labqa.pp.ua/v6/ai/mistral"
+	_ "micro.labqa.pp.ua/v6/ai/openai"
+	_ "micro.labqa.pp.ua/v6/ai/together"
 )
 
 // Flow is an event-driven LLM orchestration unit. It subscribes to

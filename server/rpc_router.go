@@ -12,9 +12,9 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"go-micro.dev/v6/codec"
-	merrors "go-micro.dev/v6/errors"
-	log "go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6/codec"
+	merrors "micro.labqa.pp.ua/v6/errors"
+	log "micro.labqa.pp.ua/v6/logger"
 )
 
 var (

@@ -4,12 +4,12 @@ import (
 	"context"
 	"log"
 
-	"go-micro.dev/v6"
-	"go-micro.dev/v6/auth"
-	"go-micro.dev/v6/auth/noop"
-	authWrapper "go-micro.dev/v6/wrapper/auth"
+	"micro.labqa.pp.ua/v6"
+	"micro.labqa.pp.ua/v6/auth"
+	"micro.labqa.pp.ua/v6/auth/noop"
+	authWrapper "micro.labqa.pp.ua/v6/wrapper/auth"
 
-	pb "go-micro.dev/v6/examples/auth/proto"
+	pb "micro.labqa.pp.ua/v6/examples/auth/proto"
 )
 
 // Greeter implements the Greeter service

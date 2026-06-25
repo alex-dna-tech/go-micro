@@ -6,10 +6,10 @@ import (
 	"fmt"
 
 	"github.com/urfave/cli/v2"
-	goagent "go-micro.dev/v6/agent"
-	"go-micro.dev/v6/cmd"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/store"
+	goagent "micro.labqa.pp.ua/v6/agent"
+	"micro.labqa.pp.ua/v6/cmd"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 func init() {

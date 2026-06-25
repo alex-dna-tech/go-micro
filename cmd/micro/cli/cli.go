@@ -8,20 +8,20 @@ import (
 	"os/exec"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/cmd"
-	"go-micro.dev/v6/codec/bytes"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/cmd"
+	"micro.labqa.pp.ua/v6/codec/bytes"
+	"micro.labqa.pp.ua/v6/registry"
 
-	"go-micro.dev/v6/cmd/micro/cli/new"
-	"go-micro.dev/v6/cmd/micro/cli/util"
+	"micro.labqa.pp.ua/v6/cmd/micro/cli/new"
+	"micro.labqa.pp.ua/v6/cmd/micro/cli/util"
 
 	// Import packages that register commands via init()
-	_ "go-micro.dev/v6/cmd/micro/cli/agent"
-	_ "go-micro.dev/v6/cmd/micro/cli/build"
-	_ "go-micro.dev/v6/cmd/micro/cli/deploy"
-	_ "go-micro.dev/v6/cmd/micro/cli/init"
-	_ "go-micro.dev/v6/cmd/micro/cli/remote"
+	_ "micro.labqa.pp.ua/v6/cmd/micro/cli/agent"
+	_ "micro.labqa.pp.ua/v6/cmd/micro/cli/build"
+	_ "micro.labqa.pp.ua/v6/cmd/micro/cli/deploy"
+	_ "micro.labqa.pp.ua/v6/cmd/micro/cli/init"
+	_ "micro.labqa.pp.ua/v6/cmd/micro/cli/remote"
 )
 
 func genProtoHandler(c *cli.Context) error {

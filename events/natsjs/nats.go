@@ -13,8 +13,8 @@ import (
 	nats "github.com/nats-io/nats.go"
 	"github.com/pkg/errors"
 
-	"go-micro.dev/v6/events"
-	"go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6/events"
+	"micro.labqa.pp.ua/v6/logger"
 )
 
 const (

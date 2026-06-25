@@ -9,8 +9,8 @@ import (
 
 	"dario.cat/mergo"
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/cmd"
-	"go-micro.dev/v6/config/source"
+	"micro.labqa.pp.ua/v6/cmd"
+	"micro.labqa.pp.ua/v6/config/source"
 )
 
 type cliSource struct {

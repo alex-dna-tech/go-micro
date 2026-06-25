@@ -14,8 +14,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"go-micro.dev/v6/logger"
-	"go-micro.dev/v6/server"
+	"micro.labqa.pp.ua/v6/logger"
+	"micro.labqa.pp.ua/v6/server"
 )
 
 var (

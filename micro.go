@@ -4,13 +4,13 @@ package micro
 import (
 	"context"
 
-	"go-micro.dev/v6/agent"
-	"go-micro.dev/v6/ai"
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/flow"
-	"go-micro.dev/v6/server"
-	"go-micro.dev/v6/service"
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/agent"
+	"micro.labqa.pp.ua/v6/ai"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/flow"
+	"micro.labqa.pp.ua/v6/server"
+	"micro.labqa.pp.ua/v6/service"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 type serviceKey struct{}

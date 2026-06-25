@@ -1,6 +1,6 @@
 package nats
 
-import "go-micro.dev/v6/registry"
+import "micro.labqa.pp.ua/v6/registry"
 
 func cp(current []*registry.Service) []*registry.Service {
 	var services []*registry.Service

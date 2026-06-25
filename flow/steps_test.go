@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 // appendStep returns a step that appends its name to the carried data,

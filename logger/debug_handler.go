@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"strings"
 
-	dlog "go-micro.dev/v6/debug/log"
+	dlog "micro.labqa.pp.ua/v6/debug/log"
 )
 
 // debugLogHandler is a slog handler that writes to the debug/log buffer

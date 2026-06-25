@@ -6,12 +6,12 @@ import (
 	"net"
 	"time"
 
-	"go-micro.dev/v6/broker"
-	"go-micro.dev/v6/codec"
-	"go-micro.dev/v6/logger"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/server"
-	"go-micro.dev/v6/transport"
+	"micro.labqa.pp.ua/v6/broker"
+	"micro.labqa.pp.ua/v6/codec"
+	"micro.labqa.pp.ua/v6/logger"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/server"
+	"micro.labqa.pp.ua/v6/transport"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding"
 )

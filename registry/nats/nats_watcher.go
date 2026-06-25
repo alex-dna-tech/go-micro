@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/nats-io/nats.go"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 type natsWatcher struct {

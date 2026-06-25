@@ -16,13 +16,13 @@ import (
 	"strings"
 	"syscall"
 
-	"go-micro.dev/v6/cmd/micro/cli/generate"
+	"micro.labqa.pp.ua/v6/cmd/micro/cli/generate"
 	"text/template"
 	"time"
 
 	"github.com/urfave/cli/v2"
 	"github.com/xlab/treeprint"
-	tmpl "go-micro.dev/v6/cmd/micro/cli/new/template"
+	tmpl "micro.labqa.pp.ua/v6/cmd/micro/cli/new/template"
 )
 
 type config struct {
@@ -55,13 +55,13 @@ func microVersion() string {
 	isRelease := func(v string) bool {
 		return strings.HasPrefix(v, "v") && !strings.Contains(v, "devel")
 	}
-	// cmd/micro is part of the go-micro.dev/v6 module, so for an installed
+	// cmd/micro is part of the micro.labqa.pp.ua/v6 module, so for an installed
 	// binary the main module version is the framework version.
-	if bi.Main.Path == "go-micro.dev/v6" && isRelease(bi.Main.Version) {
+	if bi.Main.Path == "micro.labqa.pp.ua/v6" && isRelease(bi.Main.Version) {
 		return bi.Main.Version
 	}
 	for _, dep := range bi.Deps {
-		if dep.Path == "go-micro.dev/v6" && isRelease(dep.Version) {
+		if dep.Path == "micro.labqa.pp.ua/v6" && isRelease(dep.Version) {
 			return dep.Version
 		}
 	}
@@ -346,7 +346,7 @@ func printProtoInstall(dir string, missing []string) {
 	fmt.Println("  Install them:")
 	fmt.Println("    protoc            https://github.com/protocolbuffers/protobuf/releases (or via your package manager)")
 	fmt.Println("    protoc-gen-go     go install google.golang.org/protobuf/cmd/protoc-gen-go@latest")
-	fmt.Println("    protoc-gen-micro  go install go-micro.dev/v6/cmd/protoc-gen-micro@latest")
+	fmt.Println("    protoc-gen-micro  go install micro.labqa.pp.ua/v6/cmd/protoc-gen-micro@latest")
 	fmt.Println()
 	fmt.Printf("  Then generate the code:\n    cd %s && make proto && go run .\n", dir)
 	fmt.Println()

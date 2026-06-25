@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"go-micro.dev/v6/auth"
-	jwtToken "go-micro.dev/v6/auth/jwt/token"
-	"go-micro.dev/v6/cmd"
+	"micro.labqa.pp.ua/v6/auth"
+	jwtToken "micro.labqa.pp.ua/v6/auth/jwt/token"
+	"micro.labqa.pp.ua/v6/cmd"
 )
 
 func init() {

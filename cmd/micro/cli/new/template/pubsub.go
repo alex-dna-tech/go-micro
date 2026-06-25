@@ -46,8 +46,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"go-micro.dev/v6/broker"
-	log "go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6/broker"
+	log "micro.labqa.pp.ua/v6/logger"
 
 	pb "{{.Dir}}/proto"
 )
@@ -126,9 +126,9 @@ import (
 	"{{.Dir}}/handler"
 	pb "{{.Dir}}/proto"
 
-	"go-micro.dev/v6"
-	"go-micro.dev/v6/gateway/mcp"
-	log "go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6"
+	"micro.labqa.pp.ua/v6/gateway/mcp"
+	log "micro.labqa.pp.ua/v6/logger"
 )
 
 func main() {
@@ -159,8 +159,8 @@ import (
 	"{{.Dir}}/handler"
 	pb "{{.Dir}}/proto"
 
-	"go-micro.dev/v6"
-	log "go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6"
+	log "micro.labqa.pp.ua/v6/logger"
 )
 
 func main() {

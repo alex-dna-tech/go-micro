@@ -1,7 +1,7 @@
 package mcp
 
 import (
-	"go-micro.dev/v6/service"
+	"micro.labqa.pp.ua/v6/service"
 )
 
 // WithMCP returns a service option that starts an MCP gateway alongside the
@@ -10,7 +10,7 @@ import (
 //
 // Usage:
 //
-//	import "go-micro.dev/v6/gateway/mcp"
+//	import "micro.labqa.pp.ua/v6/gateway/mcp"
 //
 //	service := micro.NewService("users",
 //	    mcp.WithMCP(":3000"),

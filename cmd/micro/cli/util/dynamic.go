@@ -14,9 +14,9 @@ import (
 
 	"github.com/stretchr/objx"
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/metadata"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/metadata"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 // AddMetadataToContext parses metadata strings in the format "Key:Value" and adds them to the context

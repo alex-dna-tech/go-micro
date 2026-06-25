@@ -7,7 +7,7 @@ import (
 	"net/http/pprof"
 	"sync"
 
-	"go-micro.dev/v6/debug/profile"
+	"micro.labqa.pp.ua/v6/debug/profile"
 )
 
 type httpProfile struct {

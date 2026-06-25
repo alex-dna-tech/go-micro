@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"go-micro.dev/v6/logger"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/logger"
+	"micro.labqa.pp.ua/v6/registry"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )
 

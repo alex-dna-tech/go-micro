@@ -3,7 +3,7 @@ package natsjskv
 import (
 	"context"
 
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 // setStoreOption returns a function to setup a context with given value.

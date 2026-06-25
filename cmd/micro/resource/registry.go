@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 // registryCommand exposes the registry interface: list, get, watch.

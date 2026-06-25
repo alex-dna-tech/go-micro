@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	natsp "github.com/nats-io/nats.go"
-	"go-micro.dev/v6/broker"
+	"micro.labqa.pp.ua/v6/broker"
 )
 
 var addrTestCases = []struct {

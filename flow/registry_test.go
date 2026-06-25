@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"go-micro.dev/v6/broker"
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/broker"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 // A trigger-bound flow announces itself in the registry as type=flow

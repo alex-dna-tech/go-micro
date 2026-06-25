@@ -3,7 +3,7 @@ package nats_test
 import (
 	"testing"
 
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 func TestRegister(t *testing.T) {

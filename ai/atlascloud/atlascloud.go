@@ -7,7 +7,7 @@
 //
 // Usage:
 //
-//	import _ "go-micro.dev/v6/ai/atlascloud"
+//	import _ "micro.labqa.pp.ua/v6/ai/atlascloud"
 //
 //	m := ai.New("atlascloud",
 //	    ai.WithAPIKey("your-api-key"),
@@ -29,7 +29,7 @@ import (
 	"strings"
 	"time"
 
-	"go-micro.dev/v6/ai"
+	"micro.labqa.pp.ua/v6/ai"
 )
 
 func init() {

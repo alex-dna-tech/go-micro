@@ -7,7 +7,7 @@ import (
 	"syscall"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/broker"
+	"micro.labqa.pp.ua/v6/broker"
 )
 
 // brokerCommand exposes the broker interface: publish, subscribe.

@@ -4,17 +4,17 @@ import (
 	"bytes"
 	errs "errors"
 
-	"go-micro.dev/v6/codec"
-	raw "go-micro.dev/v6/codec/bytes"
-	"go-micro.dev/v6/codec/grpc"
-	"go-micro.dev/v6/codec/json"
-	"go-micro.dev/v6/codec/jsonrpc"
-	"go-micro.dev/v6/codec/proto"
-	"go-micro.dev/v6/codec/protorpc"
-	"go-micro.dev/v6/errors"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/transport"
-	"go-micro.dev/v6/transport/headers"
+	"micro.labqa.pp.ua/v6/codec"
+	raw "micro.labqa.pp.ua/v6/codec/bytes"
+	"micro.labqa.pp.ua/v6/codec/grpc"
+	"micro.labqa.pp.ua/v6/codec/json"
+	"micro.labqa.pp.ua/v6/codec/jsonrpc"
+	"micro.labqa.pp.ua/v6/codec/proto"
+	"micro.labqa.pp.ua/v6/codec/protorpc"
+	"micro.labqa.pp.ua/v6/errors"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/transport"
+	"micro.labqa.pp.ua/v6/transport/headers"
 )
 
 const (

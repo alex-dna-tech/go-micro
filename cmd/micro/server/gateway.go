@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"go-micro.dev/v6/gateway/api"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/gateway/api"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 // GatewayOptions configures the HTTP gateway (legacy compatibility)

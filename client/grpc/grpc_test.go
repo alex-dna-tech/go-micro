@@ -5,10 +5,10 @@ import (
 	"net"
 	"testing"
 
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/errors"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/selector"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/errors"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/selector"
 	pgrpc "google.golang.org/grpc"
 	pb "google.golang.org/grpc/examples/helloworld/helloworld"
 )

@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"go-micro.dev/v6"
-	"go-micro.dev/v6/auth/jwt"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6"
+	"micro.labqa.pp.ua/v6/auth/jwt"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 // Example_withMCP shows the simplest way to add MCP to a service using WithMCP

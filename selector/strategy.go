@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"sync"
 
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 // Random is a random strategy algorithm for node selection.

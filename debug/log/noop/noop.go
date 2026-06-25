@@ -1,7 +1,7 @@
 package noop
 
 import (
-	"go-micro.dev/v6/debug/log"
+	"micro.labqa.pp.ua/v6/debug/log"
 )
 
 type noop struct{}

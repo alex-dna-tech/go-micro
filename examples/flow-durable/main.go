@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"go-micro.dev/v6"
+	"micro.labqa.pp.ua/v6"
 )
 
 // Order is the payload carried across steps via State.Set / State.Scan.

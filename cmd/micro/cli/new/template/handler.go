@@ -6,7 +6,7 @@ var (
 import (
 	"context"
 
-	log "go-micro.dev/v6/logger"
+	log "micro.labqa.pp.ua/v6/logger"
 
 	pb "{{.Dir}}/proto"
 )
@@ -54,7 +54,7 @@ func (e *{{title .Alias}}) Stream(ctx context.Context, req *pb.StreamingRequest,
 import (
 	"context"
 
-	log "go-micro.dev/v6/logger"
+	log "micro.labqa.pp.ua/v6/logger"
 )
 
 // Request is the input to {{title .Alias}}.Call.
@@ -88,7 +88,7 @@ func (e *{{title .Alias}}) Call(ctx context.Context, req *Request, rsp *Response
 
 import (
 	"context"
-	log "go-micro.dev/v6/logger"
+	log "micro.labqa.pp.ua/v6/logger"
 
 	pb "{{.Dir}}/proto"
 )

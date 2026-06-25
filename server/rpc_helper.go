@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"go-micro.dev/v6/codec"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/codec"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 // isRegistered will check if the service has already been registered.

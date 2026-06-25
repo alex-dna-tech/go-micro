@@ -21,19 +21,19 @@ import (
 	"sync"
 
 	"github.com/google/uuid"
-	pb "go-micro.dev/v6/agent/proto"
-	"go-micro.dev/v6/ai"
-	"go-micro.dev/v6/gateway/a2a"
-	"go-micro.dev/v6/server"
-	"go-micro.dev/v6/store"
+	pb "micro.labqa.pp.ua/v6/agent/proto"
+	"micro.labqa.pp.ua/v6/ai"
+	"micro.labqa.pp.ua/v6/gateway/a2a"
+	"micro.labqa.pp.ua/v6/server"
+	"micro.labqa.pp.ua/v6/store"
 
-	_ "go-micro.dev/v6/ai/anthropic"
-	_ "go-micro.dev/v6/ai/atlascloud"
-	_ "go-micro.dev/v6/ai/gemini"
-	_ "go-micro.dev/v6/ai/groq"
-	_ "go-micro.dev/v6/ai/mistral"
-	_ "go-micro.dev/v6/ai/openai"
-	_ "go-micro.dev/v6/ai/together"
+	_ "micro.labqa.pp.ua/v6/ai/anthropic"
+	_ "micro.labqa.pp.ua/v6/ai/atlascloud"
+	_ "micro.labqa.pp.ua/v6/ai/gemini"
+	_ "micro.labqa.pp.ua/v6/ai/groq"
+	_ "micro.labqa.pp.ua/v6/ai/mistral"
+	_ "micro.labqa.pp.ua/v6/ai/openai"
+	_ "micro.labqa.pp.ua/v6/ai/together"
 )
 
 // Agent is the interface for an AI agent that manages services.

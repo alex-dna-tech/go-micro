@@ -11,7 +11,7 @@ import (
 	"syscall"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/cmd"
+	"micro.labqa.pp.ua/v6/cmd"
 )
 
 // Status shows status of services (local or remote)

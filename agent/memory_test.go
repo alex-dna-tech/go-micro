@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 func TestStoreMemoryPersists(t *testing.T) {

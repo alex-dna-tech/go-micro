@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"strings"
 
-	"go-micro.dev/v6/codec"
-	"go-micro.dev/v6/codec/bytes"
+	"micro.labqa.pp.ua/v6/codec"
+	"micro.labqa.pp.ua/v6/codec/bytes"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding"
 	"google.golang.org/grpc/metadata"

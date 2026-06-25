@@ -5,15 +5,15 @@ import (
 	"testing"
 	"time"
 
-	"go-micro.dev/v6/agent"
-	"go-micro.dev/v6/ai"
-	"go-micro.dev/v6/broker"
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/flow"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/selector"
-	"go-micro.dev/v6/service"
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/agent"
+	"micro.labqa.pp.ua/v6/ai"
+	"micro.labqa.pp.ua/v6/broker"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/flow"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/selector"
+	"micro.labqa.pp.ua/v6/service"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 // waitForService polls the registry until name is registered, instead of

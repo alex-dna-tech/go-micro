@@ -13,12 +13,12 @@ import (
 	"time"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/cmd"
-	"go-micro.dev/v6/codec/bytes"
-	"go-micro.dev/v6/gateway/mcp"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/wrapper/x402"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/cmd"
+	"micro.labqa.pp.ua/v6/codec/bytes"
+	"micro.labqa.pp.ua/v6/gateway/mcp"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/wrapper/x402"
 )
 
 func init() {

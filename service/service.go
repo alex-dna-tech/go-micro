@@ -6,13 +6,13 @@ import (
 	rtime "runtime"
 	"sync"
 
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/cmd"
-	signalutil "go-micro.dev/v6/internal/util/signal"
-	log "go-micro.dev/v6/logger"
-	"go-micro.dev/v6/model"
-	"go-micro.dev/v6/server"
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/cmd"
+	signalutil "micro.labqa.pp.ua/v6/internal/util/signal"
+	log "micro.labqa.pp.ua/v6/logger"
+	"micro.labqa.pp.ua/v6/model"
+	"micro.labqa.pp.ua/v6/server"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 // Service is the interface for a go-micro service.

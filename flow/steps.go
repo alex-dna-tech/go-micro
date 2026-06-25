@@ -9,12 +9,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"go-micro.dev/v6/ai"
-	"go-micro.dev/v6/client"
-	codecbytes "go-micro.dev/v6/codec/bytes"
-	"go-micro.dev/v6/gateway/a2a"
-	"go-micro.dev/v6/logger"
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/ai"
+	"micro.labqa.pp.ua/v6/client"
+	codecbytes "micro.labqa.pp.ua/v6/codec/bytes"
+	"micro.labqa.pp.ua/v6/gateway/a2a"
+	"micro.labqa.pp.ua/v6/logger"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 // State carries data across the steps of a flow run. It is a struct, not

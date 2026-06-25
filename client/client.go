@@ -4,7 +4,7 @@ package client
 import (
 	"context"
 
-	"go-micro.dev/v6/codec"
+	"micro.labqa.pp.ua/v6/codec"
 )
 
 var (

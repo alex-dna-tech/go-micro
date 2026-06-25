@@ -27,12 +27,12 @@ import (
 	"syscall"
 
 	"github.com/urfave/cli/v2"
-	"go-micro.dev/v6/broker"
-	"go-micro.dev/v6/client"
-	"go-micro.dev/v6/cmd"
-	codecBytes "go-micro.dev/v6/codec/bytes"
-	"go-micro.dev/v6/registry"
-	"go-micro.dev/v6/store"
+	"micro.labqa.pp.ua/v6/broker"
+	"micro.labqa.pp.ua/v6/client"
+	"micro.labqa.pp.ua/v6/cmd"
+	codecBytes "micro.labqa.pp.ua/v6/codec/bytes"
+	"micro.labqa.pp.ua/v6/registry"
+	"micro.labqa.pp.ua/v6/store"
 )
 
 func init() {

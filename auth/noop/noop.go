@@ -14,7 +14,7 @@
 package noop
 
 import (
-	"go-micro.dev/v6/auth"
+	"micro.labqa.pp.ua/v6/auth"
 )
 
 // NewAuth returns a new noop auth provider.

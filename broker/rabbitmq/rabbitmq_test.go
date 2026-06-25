@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"go-micro.dev/v6/logger"
+	"micro.labqa.pp.ua/v6/logger"
 
-	micro "go-micro.dev/v6"
-	broker "go-micro.dev/v6/broker"
-	rabbitmq "go-micro.dev/v6/broker/rabbitmq"
-	server "go-micro.dev/v6/server"
+	micro "micro.labqa.pp.ua/v6"
+	broker "micro.labqa.pp.ua/v6/broker"
+	rabbitmq "micro.labqa.pp.ua/v6/broker/rabbitmq"
+	server "micro.labqa.pp.ua/v6/server"
 )
 
 type Example struct{}

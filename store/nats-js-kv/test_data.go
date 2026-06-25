@@ -1,6 +1,6 @@
 package natsjskv
 
-import "go-micro.dev/v6/store"
+import "micro.labqa.pp.ua/v6/store"
 
 type test struct {
 	Record   *store.Record

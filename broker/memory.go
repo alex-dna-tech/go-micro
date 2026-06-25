@@ -7,9 +7,9 @@ import (
 	"sync"
 
 	"github.com/google/uuid"
-	maddr "go-micro.dev/v6/internal/util/addr"
-	mnet "go-micro.dev/v6/internal/util/net"
-	log "go-micro.dev/v6/logger"
+	maddr "micro.labqa.pp.ua/v6/internal/util/addr"
+	mnet "micro.labqa.pp.ua/v6/internal/util/net"
+	log "micro.labqa.pp.ua/v6/logger"
 )
 
 type memoryBroker struct {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"go-micro.dev/v6/ai"
+	"micro.labqa.pp.ua/v6/ai"
 )
 
 // LoopCondition decides whether a Loop should stop, given the latest state

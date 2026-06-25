@@ -9,10 +9,10 @@ import (
 	"time"
 
 	natsp "github.com/nats-io/nats.go"
-	"go-micro.dev/v6/broker"
-	"go-micro.dev/v6/codec/json"
-	"go-micro.dev/v6/logger"
-	"go-micro.dev/v6/registry"
+	"micro.labqa.pp.ua/v6/broker"
+	"micro.labqa.pp.ua/v6/codec/json"
+	"micro.labqa.pp.ua/v6/logger"
+	"micro.labqa.pp.ua/v6/registry"
 )
 
 type natsBroker struct {

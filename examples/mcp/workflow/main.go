@@ -25,8 +25,8 @@ import (
 	"sync"
 	"time"
 
-	"go-micro.dev/v6"
-	"go-micro.dev/v6/gateway/mcp"
+	"micro.labqa.pp.ua/v6"
+	"micro.labqa.pp.ua/v6/gateway/mcp"
 )
 
 // ---------------------------------------------------------------------------
