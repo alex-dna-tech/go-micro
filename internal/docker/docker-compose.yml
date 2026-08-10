@@ -51,7 +51,10 @@ services:
       - ./llama-entrypoint.sh:/llama-entrypoint.sh:ro
     entrypoint: ["/bin/bash", "/llama-entrypoint.sh"]
 
-  examples:
+  # Runs the services from /repo/micro.mu (services only — no gateway, no
+  # HTTP listener of its own). The gw container owns the dashboard/API/MCP
+  # gateway and proxies to these services through NATS.
+  micro-run:
     <<: *micro-build
     working_dir: /repo
     environment:
@@ -60,8 +63,6 @@ services:
       MICRO_ADMIN_PASSWORD: "micro"
     volumes:
       - ../../:/repo
-    ports:
-      - "8081:8081"
     depends_on:
       - nats
-    command: run --address :8081
+    command: run --no-gateway --detach --no-watch
