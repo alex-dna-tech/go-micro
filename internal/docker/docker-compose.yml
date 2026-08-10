@@ -1,0 +1,43 @@
+# Builds the go-micro image locally from internal/docker/Dockerfile (compiles
+# the micro CLI from source). No prebuilt binaries or remote image needed.
+
+x-micro: &micro-build
+  build:
+    context: .
+    dockerfile: Dockerfile
+    additional_contexts:
+      repo: ../..
+
+services:
+  gw:
+    <<: *micro-build
+    environment:
+      MICRO_LOG_LEVEL: "debug"
+      MICRO_AI_PROVIDER: "openai"
+      MICRO_AI_BASE_URL: "http://llama:8000"
+      MICRO_AI_MODEL: "MiniCPM5-1B-Q4_K_M"
+      MICRO_AI_API_KEY: ""
+    ports:
+      - "8080:8080"
+      - "3000:3000"
+    volumes:
+      - ./micro:/micro
+    command: gateway --mcp-address :3000
+
+  llama:
+    image: ghcr.io/ggml-org/llama.cpp:server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/models
+      - ./llama-entrypoint.sh:/llama-entrypoint.sh:ro
+    entrypoint: ["/bin/bash", "/llama-entrypoint.sh"]
+
+  examples:
+    <<: *micro-build
+    working_dir: /repo
+    volumes:
+      - ../../:/repo
+    ports:
+      - "8081:8081"
+    command: run --address :8081
