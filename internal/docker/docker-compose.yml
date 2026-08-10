@@ -38,6 +38,9 @@ services:
   examples:
     <<: *micro-build
     working_dir: /repo
+    environment:
+      MICRO_ADMIN_USER: "admin"
+      MICRO_ADMIN_PASSWORD: "micro"
     volumes:
       - ../../:/repo
     ports:
