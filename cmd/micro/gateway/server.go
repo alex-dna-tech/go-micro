@@ -986,6 +986,11 @@ Use the token printed at startup, or generate more on the <a href='/auth/tokens'
 				return
 			}
 			logsDir := homeDir + "/micro/logs"
+			if err := os.MkdirAll(logsDir, 0755); err != nil {
+				w.WriteHeader(http.StatusInternalServerError)
+				w.Write([]byte("Could not create logs directory: " + err.Error()))
+				return
+			}
 			dirEntries, err := os.ReadDir(logsDir)
 			if err != nil {
 				w.WriteHeader(http.StatusInternalServerError)
@@ -1043,6 +1048,11 @@ Use the token printed at startup, or generate more on the <a href='/auth/tokens'
 				return
 			}
 			pidDir := homeDir + "/micro/run"
+			if err := os.MkdirAll(pidDir, 0755); err != nil {
+				w.WriteHeader(http.StatusInternalServerError)
+				w.Write([]byte("Could not create pid directory: " + err.Error()))
+				return
+			}
 			dirEntries, err := os.ReadDir(pidDir)
 			if err != nil {
 				w.WriteHeader(http.StatusInternalServerError)

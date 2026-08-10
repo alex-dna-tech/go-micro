@@ -8,10 +8,24 @@ x-micro: &micro-build
     additional_contexts:
       repo: ../..
 
+# Shared registry/broker for all containers: NATS (see the nats service
+# below). MICRO_REGISTRY/MICRO_BROKER point every service at it.
+x-nats: &nats-env
+  MICRO_REGISTRY: "nats"
+  MICRO_REGISTRY_ADDRESS: "nats://nats:4222"
+  MICRO_BROKER: "nats"
+  MICRO_BROKER_ADDRESS: "nats://nats:4222"
+
 services:
+  nats:
+    image: nats:latest
+    ports:
+      - "4222:4222"
+
   gw:
     <<: *micro-build
     environment:
+      <<: *nats-env
       MICRO_LOG_LEVEL: "debug"
       MICRO_AI_PROVIDER: "openai"
       MICRO_AI_BASE_URL: "http://llama:8000"
@@ -24,6 +38,8 @@ services:
       - "3000:3000"
     volumes:
       - ./micro:/micro
+    depends_on:
+      - nats
     command: gateway --mcp-address :3000
 
   llama:
@@ -39,10 +55,13 @@ services:
     <<: *micro-build
     working_dir: /repo
     environment:
+      <<: *nats-env
       MICRO_ADMIN_USER: "admin"
       MICRO_ADMIN_PASSWORD: "micro"
     volumes:
       - ../../:/repo
     ports:
       - "8081:8081"
+    depends_on:
+      - nats
     command: run --address :8081
