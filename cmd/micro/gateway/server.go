@@ -1726,10 +1726,47 @@ func initAuth() error {
 	}
 	_, _ = os.ReadFile(privPath)
 	_, _ = os.ReadFile(pubPath)
-	// No default credential is created. The gateway authenticates with the
-	// per-process machine token (see ResolveAuth) plus any accounts/tokens an
-	// operator creates via /auth. A guessable admin/micro would be friction and
-	// no security at once.
+	// No hardcoded default credential. An admin account is created only when
+	// the operator explicitly opts in via MICRO_ADMIN_PASSWORD (the docker-compose
+	// file sets it to the documented admin/micro); otherwise the gateway runs on
+	// the per-process machine token (see ResolveAuth) plus any accounts/tokens
+	// created via /auth.
+	return ensureAdminFromEnv(store.DefaultStore)
+}
+
+// ensureAdminFromEnv creates the operator-configured admin account when
+// MICRO_ADMIN_PASSWORD is set. The default user is "admin" (override with
+// MICRO_ADMIN_USER). Never overwrites an existing account, and an admin
+// explicitly deleted via /auth/users stays deleted across restarts.
+func ensureAdminFromEnv(storeInst store.Store) error {
+	pass := os.Getenv("MICRO_ADMIN_PASSWORD")
+	if pass == "" {
+		return nil
+	}
+	adminID := os.Getenv("MICRO_ADMIN_USER")
+	if adminID == "" {
+		adminID = "admin"
+	}
+	adminKey := "auth/" + adminID
+	if delRecs, _ := storeInst.Read("auth/.admin-deleted"); len(delRecs) > 0 && adminID == "admin" {
+		return nil
+	}
+	if recs, _ := storeInst.Read(adminKey); len(recs) > 0 {
+		return nil
+	}
+	hash, err := bcrypt.GenerateFromPassword([]byte(pass), bcrypt.DefaultCost)
+	if err != nil {
+		return err
+	}
+	acc := &Account{
+		ID:       adminID,
+		Type:     "admin",
+		Scopes:   []string{"*"},
+		Metadata: map[string]string{"created": time.Now().Format(time.RFC3339), "password_hash": string(hash)},
+	}
+	b, _ := json.Marshal(acc)
+	_ = storeInst.Write(&store.Record{Key: adminKey, Value: b})
+	log.Printf("[auth] created admin account %q from MICRO_ADMIN_PASSWORD", adminID)
 	return nil
 }
 
