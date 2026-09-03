@@ -161,7 +161,7 @@ services:
       - "3000:3000"
     depends_on:
       - nats-0
-    command: gateway -address :8080 --mcp-address :3000
+    command: gateway -address :8080 --mcp-address :3000 --auth
     <<: *default-logging
 
   # --- Example services (from micro.mu) ---
