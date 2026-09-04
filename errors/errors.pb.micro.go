@@ -5,8 +5,9 @@ package errors
 
 import (
 	fmt "fmt"
-	proto "google.golang.org/protobuf/proto"
 	math "math"
+
+	proto "google.golang.org/protobuf/proto"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

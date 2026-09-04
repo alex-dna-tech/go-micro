@@ -39,6 +39,7 @@ import (
 	"go-micro.dev/v6/logger"
 	"go-micro.dev/v6/registry"
 	"go.opentelemetry.io/otel"
+
 	// Register default providers.
 	_ "go-micro.dev/v6/ai/anthropic"
 	_ "go-micro.dev/v6/ai/atlascloud"

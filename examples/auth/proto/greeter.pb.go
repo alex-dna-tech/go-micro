@@ -6,6 +6,7 @@ package greeter
 import (
 	context "context"
 	fmt "fmt"
+
 	client "go-micro.dev/v6/client"
 	server "go-micro.dev/v6/server"
 )
