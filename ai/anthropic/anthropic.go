@@ -62,6 +62,78 @@ func (p *Provider) String() string {
 	return "anthropic"
 }
 
+// cacheableSystem is the system prompt as a block the API can cache.
+//
+// An agent's request is mostly the same request every time. The tools and the
+// system prompt are byte-identical from one turn to the next — for a caller
+// with a hundred tools that is tens of thousands of tokens re-sent, and
+// re-billed at full rate, on every turn and on every round of a tool loop.
+//
+// Anthropic caches the prefix up to a breakpoint, and the order of a request is
+// tools, then system, then messages. So one breakpoint at the end of the system
+// prompt caches the tools as well, which is why there is only one here and it
+// is not on the tools array. When there is no system prompt the breakpoint
+// moves to the last tool instead — see cacheableTools.
+//
+// A string is still returned where there is nothing worth caching: below the
+// minimum cacheable prefix the API quietly declines to cache, so the mark
+// would spend a breakpoint on nothing.
+func cacheableSystem(system string, tools []map[string]any, noCache bool) any {
+	if noCache || strings.TrimSpace(system) == "" {
+		return system
+	}
+	if cachePrefixSize(system, tools) < minCacheBytes {
+		return system
+	}
+	return []map[string]any{{
+		"type":          "text",
+		"text":          system,
+		"cache_control": map[string]any{"type": "ephemeral"},
+	}}
+}
+
+// cacheableTools returns the tools with a cache breakpoint on the last one,
+// but only when the system prompt cannot carry it: a request with an empty
+// system prompt and a large, stable tool catalogue is still worth caching,
+// and without this the whole catalogue would be re-sent and re-billed on
+// every call. When a system prompt is present, cacheableSystem's single
+// breakpoint already covers the tools, and marking them again would spend a
+// second of the four breakpoints a request gets for nothing.
+func cacheableTools(tools []map[string]any, system string, noCache bool) []map[string]any {
+	if noCache || len(tools) == 0 || strings.TrimSpace(system) != "" {
+		return tools
+	}
+	if cachePrefixSize("", tools) < minCacheBytes {
+		return tools
+	}
+	marked := append([]map[string]any(nil), tools...)
+	last := make(map[string]any, len(marked[len(marked)-1])+1)
+	for k, v := range marked[len(marked)-1] {
+		last[k] = v
+	}
+	last["cache_control"] = map[string]any{"type": "ephemeral"}
+	marked[len(marked)-1] = last
+	return marked
+}
+
+// cachePrefixSize estimates the byte size of the cacheable prefix. The tools
+// are marshalled once as a slice — the real request marshals them again in
+// callAPI, so this stays an estimate, not a second serialization per tool.
+func cachePrefixSize(system string, tools []map[string]any) int {
+	size := len(system)
+	if len(tools) > 0 {
+		if b, err := json.Marshal(tools); err == nil {
+			size += len(b)
+		}
+	}
+	return size
+}
+
+// minCacheBytes is the smallest prefix worth asking the API to cache, in
+// bytes (len of the UTF-8 text and marshalled tools, not characters): the
+// API's minimum cacheable prefix is 1024 tokens, at roughly four bytes each.
+const minCacheBytes = 4096
+
 // Generate generates a response from the model
 func (p *Provider) Generate(ctx context.Context, req *ai.Request, opts ...ai.GenerateOption) (*ai.Response, error) {
 	// Build tools for Anthropic format
@@ -81,12 +153,13 @@ func (p *Provider) Generate(ctx context.Context, req *ai.Request, opts ...ai.Gen
 	apiReq := map[string]any{
 		"model":      p.opts.Model,
 		"max_tokens": anthropicMaxTokens(p.opts),
-		"system":     req.SystemPrompt,
+		"system":     cacheableSystem(req.SystemPrompt, anthropicTools, p.opts.NoCache),
 		"messages":   threadAnthropicMessages(req),
 	}
+	applyReasoningOptions(apiReq, p.opts)
 
 	if len(anthropicTools) > 0 {
-		apiReq["tools"] = anthropicTools
+		apiReq["tools"] = cacheableTools(anthropicTools, req.SystemPrompt, p.opts.NoCache)
 	}
 
 	// Make API call
@@ -128,11 +201,12 @@ func (p *Provider) Generate(ctx context.Context, req *ai.Request, opts ...ai.Gen
 		followUpReq := map[string]any{
 			"model":      p.opts.Model,
 			"max_tokens": anthropicMaxTokens(p.opts),
-			"system":     req.SystemPrompt,
+			"system":     cacheableSystem(req.SystemPrompt, anthropicTools, p.opts.NoCache),
 			"messages":   messages,
 		}
+		applyReasoningOptions(followUpReq, p.opts)
 		if len(anthropicTools) > 0 {
-			followUpReq["tools"] = anthropicTools
+			followUpReq["tools"] = cacheableTools(anthropicTools, req.SystemPrompt, p.opts.NoCache)
 		}
 
 		followUpResp, followUpRaw, err := p.callAPI(ctx, followUpReq)
@@ -164,10 +238,11 @@ func (p *Provider) Stream(ctx context.Context, req *ai.Request, opts ...ai.Gener
 	apiReq := map[string]any{
 		"model":      p.opts.Model,
 		"max_tokens": anthropicMaxTokens(p.opts),
-		"system":     req.SystemPrompt,
+		"system":     cacheableSystem(req.SystemPrompt, nil, p.opts.NoCache),
 		"messages":   threadAnthropicMessages(req),
 		"stream":     true,
 	}
+	applyReasoningOptions(apiReq, p.opts)
 	reqBody, err := json.Marshal(apiReq)
 	if err != nil {
 		return nil, fmt.Errorf("failed to marshal stream request: %w", err)
@@ -214,8 +289,9 @@ func (s *streamReader) Recv() (*ai.Response, error) {
 		var chunk struct {
 			Type  string `json:"type"`
 			Delta struct {
-				Type string `json:"type"`
-				Text string `json:"text"`
+				Type       string `json:"type"`
+				Text       string `json:"text"`
+				StopReason string `json:"stop_reason"`
 			} `json:"delta"`
 			Message struct {
 				Usage struct {
@@ -241,8 +317,12 @@ func (s *streamReader) Recv() (*ai.Response, error) {
 				return &ai.Response{Usage: usage(chunk.Message.Usage.InputTokens, chunk.Message.Usage.OutputTokens)}, nil
 			}
 		case "message_delta":
-			if chunk.Usage != nil {
-				return &ai.Response{Usage: usage(chunk.Usage.InputTokens, chunk.Usage.OutputTokens)}, nil
+			if chunk.Delta.StopReason != "" || chunk.Usage != nil {
+				response := &ai.Response{StopReason: chunk.Delta.StopReason}
+				if chunk.Usage != nil {
+					response.Usage = usage(chunk.Usage.InputTokens, chunk.Usage.OutputTokens)
+				}
+				return response, nil
 			}
 		case "message_stop":
 			return nil, io.EOF
@@ -296,7 +376,10 @@ func (p *Provider) callAPI(ctx context.Context, req map[string]any) (*ai.Respons
 	defer httpResp.Body.Close()
 
 	// Read response
-	respBody, _ := io.ReadAll(httpResp.Body)
+	respBody, err := io.ReadAll(httpResp.Body)
+	if err != nil {
+		return nil, nil, fmt.Errorf("failed to read response: %w", err)
+	}
 	if httpResp.StatusCode != http.StatusOK {
 		return nil, nil, ai.NewHTTPError(httpResp, respBody)
 	}
@@ -317,7 +400,7 @@ func (p *Provider) callAPI(ctx context.Context, req map[string]any) (*ai.Respons
 		return nil, nil, fmt.Errorf("failed to parse response: %w", err)
 	}
 
-	response := &ai.Response{}
+	response := &ai.Response{StopReason: anthropicResp.StopReason}
 
 	// Extract text reply
 	var replyParts []string
@@ -394,4 +477,13 @@ func anthropicMaxTokens(o ai.Options) int {
 		return o.MaxTokens
 	}
 	return 8192
+}
+
+func applyReasoningOptions(req map[string]any, opts ai.Options) {
+	if opts.Thinking != "" {
+		req["thinking"] = map[string]any{"type": string(opts.Thinking)}
+	}
+	if opts.Effort != "" {
+		req["output_config"] = map[string]any{"effort": opts.Effort}
+	}
 }

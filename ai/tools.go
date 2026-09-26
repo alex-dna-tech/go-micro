@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"sort"
 	"strings"
 	"sync"
 
@@ -81,11 +82,22 @@ func (t *Tools) Discover() ([]Tool, error) {
 	}
 
 	var out []Tool
+	seen := map[string]bool{}
 	for _, svc := range services {
+		// ListServices returns one entry per registered version of a service;
+		// resolving each would duplicate every tool once per version.
+		if seen[svc.Name] {
+			continue
+		}
+		seen[svc.Name] = true
 		full, err := t.registry.GetService(svc.Name)
 		if err != nil || len(full) == 0 {
 			continue
 		}
+		// GetService returns the versions in map order. Pick the highest
+		// version so the same one — and therefore the same endpoint schemas
+		// and descriptions — is chosen on every discovery.
+		sort.Slice(full, func(i, j int) bool { return full[i].Version > full[j].Version })
 		for _, ep := range full[0].Endpoints {
 			original := fmt.Sprintf("%s.%s", svc.Name, ep.Name)
 			safe := strings.ReplaceAll(original, ".", "_")
@@ -100,10 +112,20 @@ func (t *Tools) Discover() ([]Tool, error) {
 
 			props := map[string]any{}
 			if ep.Request != nil {
+				descs := map[string]string{}
+				if ep.Metadata != nil {
+					if raw, ok := ep.Metadata["request_fields"]; ok && raw != "" {
+						_ = json.Unmarshal([]byte(raw), &descs)
+					}
+				}
 				for _, field := range ep.Request.Values {
+					desc := descs[field.Name]
+					if desc == "" {
+						desc = fmt.Sprintf("%s (%s)", field.Name, field.Type)
+					}
 					props[field.Name] = map[string]any{
 						"type":        toolJSONType(field.Type),
-						"description": fmt.Sprintf("%s (%s)", field.Name, field.Type),
+						"description": desc,
 					}
 				}
 			}
@@ -116,6 +138,18 @@ func (t *Tools) Discover() ([]Tool, error) {
 			})
 		}
 	}
+
+	// Deterministic order. The registry iterates a map, so without this the
+	// tool list is shuffled on every discovery — which silently defeats
+	// provider prompt caching (Anthropic cache_control, Gemini implicit
+	// caching): both key on a byte-identical prefix, and the tool catalog
+	// is the bulk of that prefix.
+	sort.SliceStable(out, func(i, j int) bool {
+		if out[i].Name != out[j].Name {
+			return out[i].Name < out[j].Name
+		}
+		return out[i].OriginalName < out[j].OriginalName
+	})
 
 	return out, nil
 }
