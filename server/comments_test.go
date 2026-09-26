@@ -1,8 +1,12 @@
 package server
 
 import (
+	"bytes"
 	"context"
+	"os"
+	"strings"
 	"testing"
+	"testing/fstest"
 )
 
 // TestService is a test service with documented methods
@@ -154,5 +158,28 @@ func TestWithEndpointScopes(t *testing.T) {
 	}
 	if !foundCreate {
 		t.Error("CreateItem endpoint not found")
+	}
+}
+
+func TestExtractHandlerDocsUsesRegisteredSource(t *testing.T) {
+	b, err := os.ReadFile("comments_test.go")
+	if err != nil {
+		t.Fatal(err)
+	}
+	marker := []byte("GetItem retrieves an item by ID.")
+	modded := bytes.Replace(b, marker, []byte("GetItem EMBEDDED retrieves an item."), 1)
+	if bytes.Equal(modded, b) {
+		t.Fatal("expected doc marker not present in test source")
+	}
+	RegisterDocFS(fstest.MapFS{"comments_test.go": {Data: modded}})
+	defer func() {
+		docSourcesMu.Lock()
+		delete(docSources, "comments_test.go")
+		docSourcesMu.Unlock()
+	}()
+
+	docs := extractHandlerDocs(&TestService{})
+	if docs["GetItem"] == nil || !strings.HasPrefix(docs["GetItem"]["description"], "GetItem EMBEDDED retrieves an item.") {
+		t.Errorf("registered source not used, got %v", docs["GetItem"])
 	}
 }
