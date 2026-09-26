@@ -14,6 +14,7 @@ package main
 
 import (
 	"context"
+	"embed"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -30,9 +31,21 @@ import (
 	_ "go-micro.dev/v6/otel"
 	"go-micro.dev/v6/registry"
 	"go-micro.dev/v6/registry/nats"
+	"go-micro.dev/v6/server"
 	gmservice "go-micro.dev/v6/service"
 	ntx "go-micro.dev/v6/transport/nats"
 )
+
+// Embed the handler source so the server's doc-comment extractor can fill
+// endpoint descriptions even in -trimpath / containerized builds where the
+// source is not on disk at runtime.
+//
+//go:embed *.go
+var handlerSrc embed.FS
+
+func init() {
+	server.RegisterDocFS(handlerSrc)
+}
 
 // --- Types ---
 
@@ -291,8 +304,10 @@ func main() {
 		opts = append(opts, mcp.WithMCP(mcpAddr))
 	}
 	var svc micro.Service
-	svc = micro.NewService("contacts",
-		append(opts,
+	svc = micro.NewService(
+		"contacts",
+		append(
+			opts,
 			// Broker event exchange: subscribe to contact events in AfterStart
 			// (fires after the server/registry/broker come up, so the NATS
 			// broker is connected) so the service reacts to created contacts.

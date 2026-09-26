@@ -8,6 +8,7 @@ package main
 
 import (
 	"context"
+	"embed"
 	"log"
 	"log/slog"
 	"os"
@@ -21,8 +22,20 @@ import (
 	_ "go-micro.dev/v6/otel"
 	"go-micro.dev/v6/registry"
 	"go-micro.dev/v6/registry/nats"
+	"go-micro.dev/v6/server"
 	ntx "go-micro.dev/v6/transport/nats"
 )
+
+// Embed the handler source so the server's doc-comment extractor can fill
+// endpoint descriptions even in -trimpath / containerized builds where the
+// source is not on disk at runtime.
+//
+//go:embed *.go
+var handlerSrc embed.FS
+
+func init() {
+	server.RegisterDocFS(handlerSrc)
+}
 
 // Greeter service handles greeting operations
 type Greeter struct{}

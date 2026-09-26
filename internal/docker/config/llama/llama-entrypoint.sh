@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
+# MODEL="/models/MiniCPM5 2B GGUF.gguf"
+# URL="https://huggingface.co/LiquidAI/LFM2.5-2.6B-GGUF/resolve/main/LFM2.5-2.6B-Q8_0.gguf?download=true"
+#
 # MODEL="/models/LFM 2.5-2.6B GGUF.gguf"
 # URL="https://huggingface.co/LiquidAI/LFM2.5-2.6B-GGUF/resolve/main/LFM2.5-2.6B-Q8_0.gguf?download=true"
 

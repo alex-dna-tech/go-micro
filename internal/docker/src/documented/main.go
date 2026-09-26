@@ -7,6 +7,7 @@ package main
 
 import (
 	"context"
+	"embed"
 	"fmt"
 	"log"
 	"log/slog"
@@ -25,6 +26,17 @@ import (
 	"go-micro.dev/v6/server"
 	ntx "go-micro.dev/v6/transport/nats"
 )
+
+// Embed the handler source so the server's doc-comment extractor can fill
+// endpoint descriptions even in -trimpath / containerized builds where the
+// source is not on disk at runtime.
+//
+//go:embed *.go
+var handlerSrc embed.FS
+
+func init() {
+	server.RegisterDocFS(handlerSrc)
+}
 
 // User represents a user in the system
 type User struct {
