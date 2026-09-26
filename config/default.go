@@ -3,13 +3,14 @@ package config
 import (
 	"bytes"
 	"fmt"
+	"sync"
+	"time"
+
 	"go-micro.dev/v6/config/loader"
 	"go-micro.dev/v6/config/loader/memory"
 	"go-micro.dev/v6/config/reader"
 	"go-micro.dev/v6/config/reader/json"
 	"go-micro.dev/v6/config/source"
-	"sync"
-	"time"
 )
 
 type config struct {

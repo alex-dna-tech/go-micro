@@ -5,13 +5,14 @@ package go_micro_server
 
 import (
 	fmt "fmt"
-	proto "github.com/golang/protobuf/proto"
 	math "math"
-)
 
-import (
+	proto "github.com/golang/protobuf/proto"
+
 	context "context"
+
 	client "go-micro.dev/v6/client"
+
 	server "go-micro.dev/v6/server"
 )
 

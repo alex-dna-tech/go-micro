@@ -57,7 +57,7 @@ import (
 // HTML is the embedded filesystem for templates and static files, set by main.go
 var HTML fs.FS
 
-const agentSystemPrompt = "You are an agent that helps users interact with microservices. Use the available tools to fulfill user requests. When you call a tool, explain what you are doing."
+const agentSystemPrompt = "You are microservice agent. Rules: (1) Each tool call once. Never repeat same tool+args. (2) Tool results go straight to user. No preamble - call tool, show results. (3) Summarize data readable: lists, tables. (4) Only call relevant tools."
 
 var (
 	apiCache struct {
@@ -701,11 +701,21 @@ func registerHandlers(mux *http.ServeMux, tmpls *templates, storeInst store.Stor
 		// toolName can be either the original dotted name or the LLM-safe
 		// underscored name; the safe name is resolved first.
 		// Checks endpoint scopes against the caller's token before executing.
+		// Tracks call fingerprints to refuse repeated identical calls (loop detection).
+		toolCallCounts := map[string]int{}
 		executeToolCall := func(_ context.Context, call ai.ToolCall) ai.ToolResult {
 			toolName := call.Name
 			input := call.Input
 			if orig, ok := safeNameMap[toolName]; ok {
 				toolName = orig
+			}
+			// Loop detection: refuse repeated identical tool calls.
+			inputBytes, _ := json.Marshal(input)
+			fp := toolName + ":" + string(inputBytes)
+			toolCallCounts[fp]++
+			if toolCallCounts[fp] > 1 {
+				errMsg := fmt.Sprintf(`{"error":"loop detected: %q already called with the same arguments. Use the data from the previous call instead of calling again."}`, toolName)
+				return ai.ToolResult{ID: call.ID, Value: map[string]string{"error": "loop detected", "tool": toolName}, Content: errMsg}
 			}
 			// Check endpoint scopes
 			if authEnabled {
@@ -763,7 +773,6 @@ func registerHandlers(mux *http.ServeMux, tmpls *templates, storeInst store.Stor
 				errMsg := `{"error":"invalid tool name"}`
 				return ai.ToolResult{ID: call.ID, Value: map[string]string{"error": "invalid tool name"}, Content: errMsg}
 			}
-			inputBytes, _ := json.Marshal(input)
 			rpcReq := client.DefaultClient.NewRequest(parts[0], parts[1], &codecBytes.Frame{Data: inputBytes})
 			var rsp codecBytes.Frame
 			if err := client.DefaultClient.Call(r.Context(), rpcReq, &rsp); err != nil {
@@ -1761,8 +1770,28 @@ func buildMCPOptions(c *cli.Context, addr string) (mcp.Options, error) {
 	}
 
 	if c.Bool("auth") {
-		opts.Auth = jwt.NewAuth()
-		logger.Printf("JWT authentication enabled")
+		// Share the HTTP gateway's JWT keypair (~/.micro/keys) so the MCP
+		// gateway validates the same JWTs the :8080 gateway signs. Without a
+		// public key the jwt provider inspects nothing and every tool call
+		// returns 401 Unauthorized.
+		homeDir, _ := os.UserHomeDir()
+		keyDir := filepath.Join(homeDir, "micro", "keys")
+		privPath := filepath.Join(keyDir, "private.pem")
+		pubPath := filepath.Join(keyDir, "public.pem")
+		if err := os.MkdirAll(keyDir, 0700); err != nil {
+			return opts, fmt.Errorf("mcp auth: create key dir: %w", err)
+		}
+		if err := InitJWTKeys(privPath, pubPath); err != nil {
+			return opts, fmt.Errorf("mcp auth: init JWT keys: %w", err)
+		}
+		pubPem, err := os.ReadFile(pubPath)
+		if err != nil {
+			return opts, fmt.Errorf("mcp auth: read public key %s: %w", pubPath, err)
+		}
+		opts.Auth = jwt.NewAuth(
+			auth.PublicKey(base64.StdEncoding.EncodeToString(pubPem)),
+		)
+		logger.Printf("JWT authentication enabled (shared key %s)", pubPath)
 	}
 
 	if scopes := c.StringSlice("scope"); len(scopes) > 0 {

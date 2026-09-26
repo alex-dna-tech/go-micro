@@ -17,9 +17,10 @@ import (
 	"strings"
 	"syscall"
 
-	"go-micro.dev/v6/cmd/micro/cli/generate"
 	"text/template"
 	"time"
+
+	"go-micro.dev/v6/cmd/micro/cli/generate"
 
 	"github.com/urfave/cli/v2"
 	"github.com/xlab/treeprint"
