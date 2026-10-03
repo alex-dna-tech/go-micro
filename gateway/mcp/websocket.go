@@ -121,6 +121,7 @@ func (wc *wsConn) handleInitialize(req *JSONRPCRequest) {
 			"name":    "go-micro-mcp",
 			"version": "1.0.0",
 		},
+		"instructions": mcpInstructions,
 	}
 	wc.sendResponse(req.ID, result)
 }
