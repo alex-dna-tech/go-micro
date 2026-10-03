@@ -37,7 +37,9 @@ import (
 	"go-micro.dev/v6/wrapper/x402"
 
 	"github.com/google/uuid"
+	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/trace"
 )
 
@@ -781,8 +783,11 @@ func (s *Server) invokeTool(w http.ResponseWriter, r *http.Request, toolName str
 	// Generate trace ID for this call
 	traceID := uuid.New().String()
 
+	// OTel: continue the caller's trace from HTTP headers.
+	baseCtx := otel.GetTextMapPropagator().Extract(r.Context(), propagation.HeaderCarrier(r.Header))
+
 	// Start OTel span (noop if TraceProvider is nil)
-	ctx, span := s.startToolSpan(r.Context(), toolName, "http", traceID)
+	ctx, span := s.startToolSpan(baseCtx, toolName, "http", traceID)
 	defer span.End()
 
 	// Authenticate and authorize
